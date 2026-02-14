@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galeri - Bali Tour</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="logo">🏝️ Bali Tour</div>
+
+  <div class="hamburger" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <ul class="nav-links">
+    <li><a href="index.html" data-translate="home">HOME</a></li>
+    <li><a href="tentang.html" data-translate="about">TENTANG KAMI</a></li>
+    <li class="dropdown">
+      <a href="#" onclick="toggleDropdown(event)" data-translate="tours">TOUR KAMI ▾</a>
+      <ul class="dropdown-menu">
+        <li><a href="#">Tour Hemat</a></li>
+        <li><a href="#">Tour Harian</a></li>
+        <li><a href="#">Tour Honeymoon</a></li>
+        <li><a href="#">Tour Keluarga</a></li>
+        <li><a href="#">Tour Adventure</a></li>
+        <li><a href="#">Tour Overland</a></li>
+        <li><a href="#">Tour Nusa Penida</a></li>
+        <li><a href="#">Tour Company Gathering</a></li>
+      </ul>
+    </li>
+    <li><a href="blog.html" data-translate="blog">BLOG</a></li>
+    <li><a href="galeri.html" data-translate="gallery">GALERI</a></li>
+    <li><a href="kontak.html" data-translate="contact">KONTAK</a></li>
+    <li>
+      <button onclick="setLanguage('id')">ID</button>
+      <button onclick="setLanguage('en')">EN</button>
+    </li>
+  </ul>
+</nav>
+
+<!-- GALLERY SECTION -->
+<section>
+  <h1>Galeri</h1>
+  <h2>Koleksi Foto Wisata di Bali</h2>
+
+  <div class="gallery">
+    <img src="images/1.jpg" alt="Pantai Bali">
+    <img src="images/2.jpg" alt="Pura Bali">
+    <img src="images/3.jpg" alt="Sawah Bali">
+    <img src="images/1.jpg" alt="Sunset Bali">
+    <img src="images/2.jpg" alt="Kuliner Bali">
+    <img src="images/3.jpg" alt="Aktivitas Bali">
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-links">
+    <a href="index.html" data-translate="footer-home">Home</a>
+    <a href="tentang.html" data-translate="footer-about">Tentang Kami</a>
+    <a href="blog.html" data-translate="footer-blog">Blog</a>
+    <a href="galeri.html" data-translate="footer-gallery">Galeri</a>
+    <a href="kontak.html" data-translate="footer-contact">Kontak</a>
+  </div>
+  <p data-translate="copyright">&copy; 2024 Bali Tour. All rights reserved.</p>
+  <p data-translate="contact-info">Hubungi kami: +62 812 3456 7890 | info@balitour.com</p>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

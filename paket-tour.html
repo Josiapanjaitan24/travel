@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Semua Paket Tour - Bali Tour</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="logo">🏝️ Lila Bali</div>
+
+  <div class="hamburger" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <ul class="nav-links">
+    <li><a href="index.html">HOME</a></li>
+    <li><a href="tentang.html">TENTANG KAMI</a></li>
+    <li class="dropdown">
+      <a href="#" onclick="toggleDropdown(event)">TOUR KAMI ▾</a>
+      <ul class="dropdown-menu">
+        <li><a href="tour-hemat.html">Tour Hemat</a></li>
+        <li><a href="tour-harian.html">Tour Harian</a></li>
+        <li><a href="tour-honeymoon.html">Tour Honeymoon</a></li>
+        <li><a href="tour-keluarga.html">Tour Keluarga</a></li>
+        <li><a href="tour-adventure.html">Tour Adventure</a></li>
+        <li><a href="tour-overland.html">Tour Overland</a></li>
+        <li><a href="tour-nusa-penida.html">Tour Nusa Penida</a></li>
+        <li><a href="tour-company-gathering.html">Tour Company Gathering</a></li>
+      </ul>
+    </li>
+    <li><a href="blog.html">BLOG</a></li>
+    <li><a href="galeri.html">GALERI</a></li>
+    <li><a href="kontak.html">KONTAK</a></li>
+    <li>
+      <button onclick="setLanguage('id')">ID</button>
+      <button onclick="setLanguage('en')">EN</button>
+    </li>
+  </ul>
+</nav>
+
+<!-- TOUR LIST SECTION -->
+<section style="padding-top: 80px;">
+  <h1>Semua Paket Tour Kami</h1>
+  <h2>Pilih Paket Tour Impianmu</h2>
+
+  <div class="cards-container" style="margin: 40px 0;">
+    
+    <div class="card">
+      <img src="images/1.jpg" alt="Tour Hemat" class="card-image">
+      <h3>💰 Tour Hemat</h3>
+      <p style="color: #666; margin: 10px 0;"><strong>Durasi:</strong> 1 Hari</p>
+      <p style="color: #0066cc; font-weight: bold; font-size: 1.3rem;">Rp 450.000/orang</p>
+      <p style="color: #666; margin: 15px 0; min-height: 60px;">Paket wisata ekonomis dengan destinasi populer di Bali. Cocok untuk backpacker dan budget traveler.</p>
+      <button onclick="window.location.href='tour-hemat.html'" style="width: 100%; background: #0066cc; color: white; padding: 10px; border: none; border-radius: 5px; cursor: pointer; font-weight: bold;">Lihat Detail</button>
+    </div>
+
+    <div class="card">
+      <img src="images/2.jpg" alt="Tour Harian" class="card-image">
+      <h3>☀️ Tour Harian</h3>
+      <p style="color: #666; margin: 10px 0;"><strong>Durasi:</strong> 1 Hari Penuh</p>
+      <p style="color: #0066cc; font-weight: bold; font-size: 1.3rem;">Rp 650.000/orang</p>
+      <p style="color: #666; margin: 15px 0; min-height: 60px;">Wisata seharian penuh dengan aktivitas lengkap dan destinasi yang lebih banyak. Ideal untuk keluarga.</p>
+      <button onclick="window.location.href='tour-harian.html'" style="width: 100%; background: #0066cc; color: white; padding: 10px; border: none; border-radius: 5px; cursor: pointer; font-weight: bold;">Lihat Detail</button>
+    </div>
+
+    <div class="card">
+      <img src="images/3.jpg" alt="Tour Honeymoon" class="card-image">
+      <h3>💕 Tour Honeymoon</h3>
+      <p style="color: #666; margin: 10px 0;"><strong>Durasi:</strong> 2 Hari 1 Malam</p>
+      <p style="color: #0066cc; font-weight: bold; font-size: 1.3rem;">Rp 2.500.000/couple</p>
+      <p style="color: #666; margin: 15px 0; min-height: 60px;">Paket spesial romantis untuk pengantin dengan dinner tepi pantai dan spa couples massage.</p>
+      <button onclick="window.location.href='tour-honeymoon.html'" style="width: 100%; background: #0066cc; color: white; padding: 10px; border: none; border-radius: 5px; cursor: pointer; font-weight: bold;">Lihat Detail</button>
+    </div>
+
+    <div class="card">
+      <img src="images/1.jpg" alt="Tour Keluarga" class="card-image">
+      <h3>👨‍👩‍👧‍👦 Tour Keluarga</h3>
+      <p style="color: #666; margin: 10px 0;"><strong>Durasi:</strong> 1 Hari Penuh</p>
+      <p style="color: #0066cc; font-weight: bold; font-size: 1.3rem;">Rp 550.000/orang</p>
+      <p style="color: #666; margin: 15px 0; min-height: 60px;">Paket wisata keluarga dengan aktivitas seru untuk anak-anak. Water park, pantai, dan permainan tradisional.</p>
+      <button onclick="window.location.href='tour-keluarga.html'" style="width: 100%; background: #0066cc; color: white; padding: 10px; border: none; border-radius: 5px; cursor: pointer; font-weight: bold;">Lihat Detail</button>
+    </div>
+
+    <div class="card">
+      <img src="images/2.jpg" alt="Tour Adventure" class="card-image">
+      <h3>⛰️ Tour Adventure</h3>
+      <p style="color: #666; margin: 10px 0;"><strong>Durasi:</strong> 2 Hari 1 Malam</p>
+      <p style="color: #0066cc; font-weight: bold; font-size: 1.3rem;">Rp 1.200.000/orang</p>
+      <p style="color: #666; margin: 15px 0; min-height: 60px;">Petualangan ekstrem dengan mendaki gunung, rafting, dan trekking. Untuk yang hobi seru-seruan!</p>
+      <button onclick="window.location.href='tour-adventure.html'" style="width: 100%; background: #0066cc; color: white; padding: 10px; border: none; border-radius: 5px; cursor: pointer; font-weight: bold;">Lihat Detail</button>
+    </div>
+
+    <div class="card">
+      <img src="images/3.jpg" alt="Tour Overland" class="card-image">
+      <h3>🚗 Tour Overland</h3>
+      <p style="color: #666; margin: 10px 0;"><strong>Durasi:</strong> 3 Hari 2 Malam</p>
+      <p style="color: #0066cc; font-weight: bold; font-size: 1.3rem;">Rp 1.500.000/orang</p>
+      <p style="color: #666; margin: 15px 0; min-height: 60px;">Menjelajahi seluruh Bali dengan armada luxury. Destinasi lengkap, guide profesional, dan akomodasi premium.</p>
+      <button onclick="window.location.href='tour-overland.html'" style="width: 100%; background: #0066cc; color: white; padding: 10px; border: none; border-radius: 5px; cursor: pointer; font-weight: bold;">Lihat Detail</button>
+    </div>
+
+    <div class="card">
+      <img src="images/1.jpg" alt="Tour Nusa Penida" class="card-image">
+      <h3>🏝️ Tour Nusa Penida</h3>
+      <p style="color: #666; margin: 10px 0;"><strong>Durasi:</strong> 1 Hari (Island Hopping)</p>
+      <p style="color: #0066cc; font-weight: bold; font-size: 1.3rem;">Rp 850.000/orang</p>
+      <p style="color: #666; margin: 15px 0; min-height: 60px;">Island hopping ke Nusa Penida dengan snorkeling, pantai cantik, dan destinasi Instagram-worthy.</p>
+      <button onclick="window.location.href='tour-nusa-penida.html'" style="width: 100%; background: #0066cc; color: white; padding: 10px; border: none; border-radius: 5px; cursor: pointer; font-weight: bold;">Lihat Detail</button>
+    </div>
+
+    <div class="card">
+      <img src="images/2.jpg" alt="Tour Company Gathering" class="card-image">
+      <h3>👔 Tour Company Gathering</h3>
+      <p style="color: #666; margin: 10px 0;"><strong>Durasi:</strong> Custom (1-5 Hari)</p>
+      <p style="color: #0066cc; font-weight: bold; font-size: 1.3rem;">Mulai Rp 5.000.000</p>
+      <p style="color: #666; margin: 15px 0; min-height: 60px;">Paket corporate khusus untuk team building, gathering, dan event perusahaan. Fully customizable.</p>
+      <button onclick="window.location.href='tour-company-gathering.html'" style="width: 100%; background: #0066cc; color: white; padding: 10px; border: none; border-radius: 5px; cursor: pointer; font-weight: bold;">Lihat Detail</button>
+    </div>
+
+  </div>
+
+  <div style="text-align: center; margin: 40px 0;">
+    <button onclick="window.location.href='kontak.html'" style="background: #0066cc; color: white; padding: 15px 40px; border: none; border-radius: 5px; cursor: pointer; font-weight: bold; font-size: 1.1rem;">Pesan Sekarang</button>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="tentang.html">Tentang Kami</a>
+    <a href="blog.html">Blog</a>
+    <a href="galeri.html">Galeri</a>
+    <a href="kontak.html">Kontak</a>
+  </div>
+  <p>&copy; 2024 Bali Tour. All rights reserved.</p>
+  <p>Hubungi kami: +62 812 3456 7890 | info@balitour.com</p>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

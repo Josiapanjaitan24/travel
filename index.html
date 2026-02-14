@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bali Tour - Sewa Mobil & Paket Wisata Bali</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="logo">🏝️ Lila Bali</div>
+
+  <div class="hamburger" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <ul class="nav-links">
+    <li><a href="index.html" data-translate="home">HOME</a></li>
+    <li><a href="tentang.html" data-translate="about">TENTANG KAMI</a></li>
+
+    <li class="dropdown">
+      <a href="#" onclick="toggleDropdown(event)" data-translate="tours">TOUR KAMI ▾</a>
+      <ul class="dropdown-menu">
+        <li><a href="tour-hemat.html">Tour Hemat</a></li>
+        <li><a href="tour-harian.html">Tour Harian</a></li>
+        <li><a href="tour-honeymoon.html">Tour Honeymoon</a></li>
+        <li><a href="tour-keluarga.html">Tour Keluarga</a></li>
+        <li><a href="tour-adventure.html">Tour Adventure</a></li>
+        <li><a href="tour-overland.html">Tour Overland</a></li>
+        <li><a href="tour-nusa-penida.html">Tour Nusa Penida</a></li>
+        <li><a href="tour-company-gathering.html">Tour Company Gathering</a></li>
+      </ul>
+    </li>
+
+    <li><a href="blog.html" data-translate="blog">BLOG</a></li>
+    <li><a href="galeri.html" data-translate="gallery">GALERI</a></li>
+    <li><a href="kontak.html" data-translate="contact">KONTAK</a></li>
+
+    <li>
+      <button onclick="setLanguage('id')">ID</button>
+      <button onclick="setLanguage('en')">EN</button>
+    </li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero" style="background-image: url('images/bahlil.jpg');">
+  <div class="hero-content">
+    <h1 data-translate="welcome-text">Welcome to Bali Tour</h1>
+    <p data-translate="welcome-desc">Explore the beauty of Bali with us</p>
+    <button onclick="document.querySelector('section:nth-of-type(2)').scrollIntoView({behavior: 'smooth'})" data-translate="see-tours">Lihat Paket Tour</button>
+  </div>
+</section>
+
+<!-- PAKET WISATA -->
+<section>
+  <h1 data-translate="tour-packages">PAKET WISATA</h1>
+  <h2 data-translate="explore-bali">Jelajahi keindahan Bali</h2>
+
+  <div class="cards-container">
+    <div class="tour-card" style="background-image: url('images/1.jpg');">
+      <div class="tour-overlay">
+        <h3>Tour Hemat</h3>
+        <p>Paket wisata hemat dengan harga terjangkau untuk semua kalangan.</p>
+        <button onclick="window.location.href='tour-hemat.html'">Lihat Detail <span>→</span></button>
+      </div>
+    </div>
+
+    <div class="tour-card" style="background-image: url('images/2.jpg');">
+      <div class="tour-overlay">
+        <h3>Tour Honeymoon</h3>
+        <p>Paket wisata spesial untuk pasangan baru dengan destinasi romantis.</p>
+        <button onclick="window.location.href='tour-honeymoon.html'">Lihat Detail <span>→</span></button>
+      </div>
+    </div>
+
+    <div class="tour-card" style="background-image: url('images/3.jpg');">
+      <div class="tour-overlay">
+        <h3>Tour Keluarga</h3>
+        <p>Paket wisata keluarga dengan aktivitas seru untuk semua umur.</p>
+        <button onclick="window.location.href='tour-keluarga.html'">Lihat Detail <span>→</span></button>
+      </div>
+    </div>
+  </div>
+
+  <div style="text-align: center;">
+    <button onclick="window.location.href='paket-tour.html'" style="background: #0066cc; color: white; padding: 12px 30px; border: none; border-radius: 5px; cursor: pointer; font-weight: bold;" data-translate="see-all-tours">Lihat Semua Paket Tour</button>
+  </div>
+</section>
+
+<!-- SEWA MOBIL -->
+<section>
+  <h1 data-translate="car-rental">SEWA MOBIL BALI</h1>
+  <h2 data-translate="best-fleet">Armada Kendaraan Terbaik untuk Perjalanan Anda</h2>
+
+  <div class="cards-container">
+    <div class="card">
+      <img src="images/1.jpg" alt="Toyota Avanza" class="card-image">
+      <h3>Toyota Avanza</h3>
+      <p>Mobil keluarga yang nyaman dan ekonomis untuk perjalanan Anda.</p>
+      <p style="color: #ff6b6b; font-weight: bold; font-size: 1.2rem;">Mulai dari Rp 350.000</p>
+      <button onclick="window.location.href='detail-harga-mobil.html#avanza'">Detail Harga</button>
+      <button>Whatsapp</button>
+      <button>Telephone</button>
+    </div>
+
+    <div class="card">
+      <img src="images/2.jpg" alt="Honda CR-V" class="card-image">
+      <h3>Honda CR-V</h3>
+      <p>SUV modern dengan fitur keselamatan terbaik untuk petualangan Anda.</p>
+      <p style="color: #ff6b6b; font-weight: bold; font-size: 1.2rem;">Mulai dari Rp 450.000</p>
+      <button onclick="window.location.href='detail-harga-mobil.html#crv'">Detail Harga</button>
+      <button>Whatsapp</button>
+      <button>Telephone</button>
+    </div>
+
+    <div class="card">
+      <img src="images/3.jpg" alt="Toyota Innova" class="card-image">
+      <h3>Toyota Innova</h3>
+      <p>MPV premium dengan kapasitas besar dan kenyamanan maksimal.</p>
+      <p style="color: #ff6b6b; font-weight: bold; font-size: 1.2rem;">Mulai dari Rp 550.000</p>
+      <button onclick="window.location.href='detail-harga-mobil.html#innova'">Detail Harga</button>
+      <button>Whatsapp</button>
+      <button>Telephone</button>
+    </div>
+  </div>
+
+  <div style="text-align: center;">
+    <button onclick="window.location.href='detail-harga-mobil.html'" style="background: #0066cc; color: white; padding: 12px 30px; border: none; border-radius: 5px; cursor: pointer; font-weight: bold;" data-translate="see-all-cars">Lihat Semua Mobil & Harga</button>
+  </div>
+</section>
+
+<!-- GOOGLE MAPS -->
+<section>
+  <h1 data-translate="office-location">Lokasi Kantor</h1>
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3944.1234567890!2d115.1234567!3d-8.5678901!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sJalan%20Contoh%2C%20Bali!5e0!3m2!1sen!2sid!4v1234567890" width="100%" height="400" style="border:0; border-radius: 8px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade;"></iframe>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-links">
+    <a href="index.html" data-translate="footer-home">Home</a>
+    <a href="tentang.html" data-translate="footer-about">Tentang Kami</a>
+    <a href="blog.html" data-translate="footer-blog">Blog</a>
+    <a href="galeri.html" data-translate="footer-gallery">Galeri</a>
+    <a href="kontak.html" data-translate="footer-contact">Kontak</a>
+  </div>
+  <p data-translate="copyright">&copy; 2024 Bali Tour. All rights reserved.</p>
+  <p data-translate="contact-info">Hubungi kami: +62 812 3456 7890 | info@balitour.com</p>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

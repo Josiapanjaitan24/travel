@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tour Nusa Penida - Bali Tour</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="logo">🏝️ Lila Bali</div>
+
+  <div class="hamburger" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <ul class="nav-links">
+    <li><a href="index.html">HOME</a></li>
+    <li><a href="tentang.html">TENTANG KAMI</a></li>
+    <li class="dropdown">
+      <a href="#" onclick="toggleDropdown(event)">TOUR KAMI ▾</a>
+      <ul class="dropdown-menu">
+        <li><a href="tour-hemat.html">Tour Hemat</a></li>
+        <li><a href="tour-harian.html">Tour Harian</a></li>
+        <li><a href="tour-honeymoon.html">Tour Honeymoon</a></li>
+        <li><a href="tour-keluarga.html">Tour Keluarga</a></li>
+        <li><a href="tour-adventure.html">Tour Adventure</a></li>
+        <li><a href="tour-overland.html">Tour Overland</a></li>
+        <li><a href="tour-nusa-penida.html">Tour Nusa Penida</a></li>
+        <li><a href="tour-company-gathering.html">Tour Company Gathering</a></li>
+      </ul>
+    </li>
+    <li><a href="blog.html">BLOG</a></li>
+    <li><a href="galeri.html">GALERI</a></li>
+    <li><a href="kontak.html">KONTAK</a></li>
+    <li>
+      <button onclick="setLanguage('id')">ID</button>
+      <button onclick="setLanguage('en')">EN</button>
+    </li>
+  </ul>
+</nav>
+
+<!-- TOUR DETAIL SECTION -->
+<section style="padding-top: 80px;">
+  <h1>🏝️ Tour Nusa Penida - Bali Tour</h1>
+  <h2>Island Hopping ke Surga Tersembunyi</h2>
+
+  <div class="cards-container" style="margin: 40px 0;">
+    <div class="card">
+      <h3>📍 Destinasi Pulau</h3>
+      <ul style="color: #b0b0b0; line-height: 2; padding-left: 20px;">
+        <li>✓ Kelingking Beach</li>
+        <li>✓ Broken Beach</li>
+        <li>✓ Angel Billabong</li>
+        <li>✓ Snorkeling Crystal Bay</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>⏰ Durasi & Jadwal</h3>
+      <p><strong>Durasi:</strong> 1 Hari Penuh</p>
+      <p><strong>Keberangkatan:</strong> Setiap Hari (Pagi 07:00)</p>
+      <p><strong>Bahasa:</strong> Indonesia & English</p>
+    </div>
+
+    <div class="card">
+      <h3>💰 Harga Paket</h3>
+      <p style="color: #ff6b6b; font-weight: bold; font-size: 1.3rem;">Rp 850.000 per orang</p>
+      <p style="color: #b0b0b0; font-size: 0.9rem;">Termasuk Ferry & Aktivitas<br>Min 2 orang</p>
+    </div>
+  </div>
+
+  <div class="card" style="max-width: 900px; margin: 30px auto;">
+    <h3>📋 Apa yang Disertakan</h3>
+    <ul style="color: #b0b0b0; line-height: 2.2; padding-left: 20px;">
+      <li>✓ Penjemputan dari Hotel</li>
+      <li>✓ Ferry Round Trip (Sanur - Nusa Penida)</li>
+      <li>✓ Mobil Lokal di Nusa Penida</li>
+      <li>✓ Tiket Masuk Semua Tempat</li>
+      <li>✓ Makan Siang Seafood Fresh</li>
+      <li>✓ Equipment Snorkeling Lengkap</li>
+      <li>✓ Guide Berpengalaman & Insurance</li>
+    </ul>
+  </div>
+
+  <div class="card" style="max-width: 900px; margin: 30px auto;">
+    <h3>🕐 Itinerary (Perjalanan)</h3>
+    <div style="color: #b0b0b0; line-height: 2.5;">
+      <p><strong style="color: #ff6b6b;">07:00</strong> - Penjemputan dari Hotel</p>
+      <p><strong style="color: #ff6b6b;">08:00</strong> - Naik Ferry Sanur ke Nusa Penida</p>
+      <p><strong style="color: #ff6b6b;">09:30</strong> - Kelingking Beach & Broken Beach</p>
+      <p><strong style="color: #ff6b6b;">12:00</strong> - Makan Siang Seafood</p>
+      <p><strong style="color: #ff6b6b;">13:30</strong> - Angel Billabong & Snorkeling</p>
+      <p><strong style="color: #ff6b6b;">16:00</strong> - Kembali ke Sanur</p>
+      <p><strong style="color: #ff6b6b;">17:30</strong> - Tiba di Hotel</p>
+    </div>
+  </div>
+
+  <div style="text-align: center; margin: 40px 0;">
+    <button onclick="window.location.href='kontak.html'" style="background: #ff6b6b; color: white; padding: 15px 40px; border: none; border-radius: 5px; cursor: pointer; font-weight: bold; font-size: 1.1rem; margin-right: 10px;">Pesan Tour Ini</button>
+    <button onclick="window.location.href='index.html'" style="background: #0d3b66; color: white; padding: 15px 40px; border: none; border-radius: 5px; cursor: pointer; font-weight: bold; font-size: 1.1rem;">Kembali ke Home</button>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="tentang.html">Tentang Kami</a>
+    <a href="blog.html">Blog</a>
+    <a href="galeri.html">Galeri</a>
+    <a href="kontak.html">Kontak</a>
+  </div>
+  <p>&copy; 2024 Bali Tour. All rights reserved.</p>
+  <p>Hubungi kami: +62 812 3456 7890 | info@balitour.com</p>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
