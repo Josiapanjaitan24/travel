@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Pilihan Mobil Lotus Bali – Armada lengkap sudah termasuk supir" />
+  <title>Pilihan Mobil – Lotus Bali</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="icon" type="image/png" href="../assets/icon.png">
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav id="navbar" class="navbar navbar--inner">
+  <div class="navbar__container">
+    <a href="home.html" class="navbar__logo">
+      <div class="navbar__logo-icon">
+        <img src="../assets/icon.png" alt="Lotus Bali Logo" class="navbar__logo-image" />
+      </div>
+      <div class="navbar__logo-text">Lotus <span>Bali</span></div>
+    </a>
+    <ul class="navbar__menu" id="navMenu">
+      <li><a href="home.html"    class="navbar__link" data-i18n="nav_home">Home</a></li>
+      <li><a href="tentang.html" class="navbar__link" data-i18n="nav_tentang">Tentang Kami</a></li>
+      <li><a href="paket.html"   class="navbar__link" data-i18n="nav_paket">Paket Wisata</a></li>
+      <li><a href="mobil.html"   class="navbar__link navbar__link--active" data-i18n="nav_mobil">Pilihan Mobil</a></li>
+      <li><a href="hubungi.html" class="navbar__link" data-i18n="nav_hubungi">Hubungi</a></li>
+    </ul>
+    <div class="navbar__controls">
+      <div class="lang-toggle">
+        <button class="lang-toggle__btn lang-toggle__btn--active" data-lang="id">ID</button>
+        <button class="lang-toggle__btn" data-lang="en">EN</button>
+      </div>
+      <button class="navbar__hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="container">
+    <div class="page-hero__content">
+      <span class="page-hero__eyebrow" data-i18n="mobil_eyebrow">Armada Kami</span>
+      <h1 class="page-hero__title" data-i18n="mobil_title">Pilihan Kendaraan</h1>
+      <p class="page-hero__subtitle" data-i18n="mobil_subtitle">Semua sudah termasuk supir, BBM, dan asuransi. Armada terawat & berpendingin.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CARS GRID -->
+<section class="section">
+  <div class="container">
+    <div class="cars__grid">
+
+      <!-- 1. Toyota Avanza -->
+      <article class="car-card js-reveal js-reveal--delay-1">
+        <div class="car-card__image">
+          <img src="../assets/avanza.jpg" alt="Toyota avanza" class="car-card__img">
+        </div>
+        <div class="car-card__body">
+          <div class="car-card__header">
+            <h3 class="car-card__title" data-i18n="c1_name">Toyota Avanza</h3>
+          </div>
+          <p class="car-card__desc" data-i18n="c1_desc">Pilihan ideal untuk keluarga kecil dan city tour. Nyaman untuk perjalanan sehari penuh di Bali.</p>
+          <!-- Micro-icon Specs -->
+          <div class="car-card__specs">
+            <div class="car-card__spec">
+              <i data-lucide="users" width="14" height="14"></i>
+              <span><strong data-i18n="c1_cap">6 Penumpang</strong></span>
+            </div>
+            <div class="car-card__spec">
+              <i data-lucide="briefcase" width="14" height="14"></i>
+              <span><strong data-i18n="c1_bag">3 Koper</strong></span>
+            </div>
+            <div class="car-card__spec">
+              <i data-lucide="settings" width="14" height="14"></i>
+              <span><strong data-i18n="c1_trans">Manual</strong></span>
+            </div>
+            <div class="car-card__spec">
+              <i data-lucide="wind" width="14" height="14"></i>
+              <span><strong data-i18n="c1_ac">Single Blower</strong></span>
+            </div>
+          </div>
+          <button class="btn btn--outline-dark btn--block" data-select-car="Toyota Avanza" data-i18n="select_car_btn">Pilih Kendaraan</button>
+        </div>
+      </article>
+
+      <!-- 2. Innova Reborn -->
+      <article class="car-card js-reveal js-reveal--delay-2">
+        <div class="car-card__image">
+          <img src="../assets/inova.jpg" alt="Toyota Innova Reborn" class="car-card__img">
+        </div>
+        <div class="car-card__body">
+          <div class="car-card__header">
+            <h3 class="car-card__title" data-i18n="c2_name">Toyota Innova Reborn</h3>
+          </div>
+          <p class="car-card__desc" data-i18n="c2_desc">Premium dan lapang, ideal untuk keluarga besar atau group. Suspensi nyaman di segala medan.</p>
+          <div class="car-card__specs">
+            <div class="car-card__spec">
+              <i data-lucide="users" width="14" height="14"></i>
+              <span><strong data-i18n="c2_cap">7 Penumpang</strong></span>
+            </div>
+            <div class="car-card__spec">
+              <i data-lucide="briefcase" width="14" height="14"></i>
+              <span><strong data-i18n="c2_bag">4 Koper</strong></span>
+            </div>
+            <div class="car-card__spec">
+              <i data-lucide="settings" width="14" height="14"></i>
+              <span><strong data-i18n="c2_trans">Otomatis</strong></span>
+            </div>
+            <div class="car-card__spec">
+              <i data-lucide="wind" width="14" height="14"></i>
+              <span><strong data-i18n="c2_ac">Double Blower</strong></span>
+            </div>
+          </div>
+          <button class="btn btn--outline-dark btn--block" data-select-car="Toyota Innova Reborn" data-i18n="select_car_btn">Pilih Kendaraan</button>
+        </div>
+      </article>
+
+      <!-- 3. Alphard (VIP) -->
+      <article class="car-card car-card--featured js-reveal js-reveal--delay-3">
+        <div class="car-card__vip-badge">VIP</div>
+        <div class="car-card__image">
+          <img src="../assets/alphard.jpg" alt="Toyota Alphard" class="car-card__img">
+        </div>
+        <div class="car-card__body">
+          <div class="car-card__header">
+            <h3 class="car-card__title" data-i18n="c3_name">Toyota Alphard</h3>
+          </div>
+          <p class="car-card__desc" data-i18n="c3_desc">Kemewahan VIP untuk perjalanan istimewa. Kursi kulit premium, entertainment system lengkap.</p>
+          <div class="car-card__specs">
+            <div class="car-card__spec">
+              <i data-lucide="users" width="14" height="14"></i>
+              <span><strong data-i18n="c3_cap">6 Penumpang</strong></span>
+            </div>
+            <div class="car-card__spec">
+              <i data-lucide="briefcase" width="14" height="14"></i>
+              <span><strong data-i18n="c3_bag">4 Koper</strong></span>
+            </div>
+            <div class="car-card__spec">
+              <i data-lucide="settings" width="14" height="14"></i>
+              <span><strong data-i18n="c3_trans">Otomatis</strong></span>
+            </div>
+            <div class="car-card__spec">
+              <i data-lucide="wind" width="14" height="14"></i>
+              <span><strong data-i18n="c3_ac">Dual Zone</strong></span>
+            </div>
+          </div>
+          <button class="btn btn--primary btn--block" data-select-car="Toyota Alphard" data-i18n="select_car_btn">Pilih Kendaraan</button>
+        </div>
+      </article>
+
+      <!-- 4. Hiace -->
+      <article class="car-card js-reveal js-reveal--delay-1">
+        <div class="car-card__image">
+          <img src="../assets/hiace.jpg" alt="Toyota Hiace" class="car-card__img">
+        </div>
+        <div class="car-card__body">
+          <div class="car-card__header">
+            <h3 class="car-card__title" data-i18n="c4_name">Toyota Hiace Premium</h3>
+          </div>
+          <p class="car-card__desc" data-i18n="c4_desc">Minibus spacious untuk rombongan menengah. Kabin tinggi dan legroom ekstra luas.</p>
+          <div class="car-card__specs">
+            <div class="car-card__spec">
+              <i data-lucide="users" width="14" height="14"></i>
+              <span><strong data-i18n="c4_cap">14 Penumpang</strong></span>
+            </div>
+            <div class="car-card__spec">
+              <i data-lucide="briefcase" width="14" height="14"></i>
+              <span><strong data-i18n="c4_bag">8 Koper</strong></span>
+            </div>
+            <div class="car-card__spec">
+              <i data-lucide="settings" width="14" height="14"></i>
+              <span><strong data-i18n="c4_trans">Manual</strong></span>
+            </div>
+            <div class="car-card__spec">
+              <i data-lucide="wind" width="14" height="14"></i>
+              <span><strong data-i18n="c4_ac">Double Blower</strong></span>
+            </div>
+          </div>
+          <button class="btn btn--outline-dark btn--block" data-select-car="Toyota Hiace Premium" data-i18n="select_car_btn">Pilih Kendaraan</button>
+        </div>
+      </article>
+
+      <!-- 5. Elf 20 Seat -->
+      <article class="car-card js-reveal js-reveal--delay-2">
+        <div class="car-card__image">
+          <img src="../assets/elf.jpg" alt="Isuzu Elf" class="car-card__img">
+        </div>
+        <div class="car-card__body">
+          <div class="car-card__header">
+            <h3 class="car-card__title" data-i18n="c5_name">Isuzu Elf 20 Seat</h3>
+          </div>
+          <p class="car-card__desc" data-i18n="c5_desc">Sempurna untuk rombongan besar – piknik, study tour, atau corporate outing.</p>
+          <div class="car-card__specs">
+            <div class="car-card__spec">
+              <i data-lucide="users" width="14" height="14"></i>
+              <span><strong data-i18n="c5_cap">20 Penumpang</strong></span>
+            </div>
+            <div class="car-card__spec">
+              <i data-lucide="briefcase" width="14" height="14"></i>
+              <span><strong data-i18n="c5_bag">10 Koper</strong></span>
+            </div>
+            <div class="car-card__spec">
+              <i data-lucide="settings" width="14" height="14"></i>
+              <span><strong data-i18n="c5_trans">Manual</strong></span>
+            </div>
+            <div class="car-card__spec">
+              <i data-lucide="wind" width="14" height="14"></i>
+              <span><strong data-i18n="c5_ac">Double Blower</strong></span>
+            </div>
+          </div>
+          <button class="btn btn--outline-dark btn--block" data-select-car="Isuzu Elf 20 Seat" data-i18n="select_car_btn">Pilih Kendaraan</button>
+        </div>
+      </article>
+
+      <!-- 6. Bus 30 Seat -->
+      <article class="car-card js-reveal js-reveal--delay-3">
+        <div class="car-card__image">
+          <img src="../assets/bus.jpg" alt="Bus 30 Seat" class="car-card__img">
+        </div>
+        <div class="car-card__body">
+          <div class="car-card__header">
+            <h3 class="car-card__title" data-i18n="c6_name">Bus Pariwisata 30 Seat</h3>
+          </div>
+          <p class="car-card__desc" data-i18n="c6_desc">Bus lengkap dengan sound system, microphone, dan reclining seat untuk kenyamanan maksimal.</p>
+          <div class="car-card__specs">
+            <div class="car-card__spec">
+              <i data-lucide="users" width="14" height="14"></i>
+              <span><strong data-i18n="c6_cap">30 Penumpang</strong></span>
+            </div>
+            <div class="car-card__spec">
+              <i data-lucide="briefcase" width="14" height="14"></i>
+              <span><strong data-i18n="c6_bag">15+ Koper</strong></span>
+            </div>
+            <div class="car-card__spec">
+              <i data-lucide="settings" width="14" height="14"></i>
+              <span><strong data-i18n="c6_trans">Otomatis</strong></span>
+            </div>
+            <div class="car-card__spec">
+              <i data-lucide="wind" width="14" height="14"></i>
+              <span><strong data-i18n="c6_ac">Central AC</strong></span>
+            </div>
+          </div>
+          <button class="btn btn--outline-dark btn--block" data-select-car="Bus Pariwisata 30 Seat" data-i18n="select_car_btn">Pilih Kendaraan</button>
+        </div>
+      </article>
+
+    </div><!-- /cars__grid -->
+
+    <!-- Includes note -->
+    <div class="js-reveal" style="margin-top:56px;padding:32px;background:var(--color-secondary-lt);border-radius:20px;border:1px solid rgba(17,138,178,0.2);">
+      <h3 style="color:var(--color-primary);margin-bottom:16px;text-align:center;">✅ Semua Kendaraan Sudah Termasuk:</h3>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;">
+        <div style="display:flex;align-items:center;gap:8px;font-size:0.875rem;color:var(--color-text-muted);">
+          <i data-lucide="check-circle" width="16" height="16" style="stroke:var(--color-success);flex-shrink:0;"></i>
+          Driver Berpengalaman
+        </div>
+        <div style="display:flex;align-items:center;gap:8px;font-size:0.875rem;color:var(--color-text-muted);">
+          <i data-lucide="check-circle" width="16" height="16" style="stroke:var(--color-success);flex-shrink:0;"></i>
+          Bahan Bakar (BBM)
+        </div>
+        <div style="display:flex;align-items:center;gap:8px;font-size:0.875rem;color:var(--color-text-muted);">
+          <i data-lucide="check-circle" width="16" height="16" style="stroke:var(--color-success);flex-shrink:0;"></i>
+          Biaya Parkir
+        </div>
+        <div style="display:flex;align-items:center;gap:8px;font-size:0.875rem;color:var(--color-text-muted);">
+          <i data-lucide="check-circle" width="16" height="16" style="stroke:var(--color-success);flex-shrink:0;"></i>
+          Asuransi Perjalanan
+        </div>
+        <div style="display:flex;align-items:center;gap:8px;font-size:0.875rem;color:var(--color-text-muted);">
+          <i data-lucide="check-circle" width="16" height="16" style="stroke:var(--color-success);flex-shrink:0;"></i>
+          Air Mineral
+        </div>
+        <div style="display:flex;align-items:center;gap:8px;font-size:0.875rem;color:var(--color-text-muted);">
+          <i data-lucide="check-circle" width="16" height="16" style="stroke:var(--color-success);flex-shrink:0;"></i>
+          Support 24/7
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div>
+        <div class="footer__logo">
+          <img src="../assets/icon.png" alt="Lotus Bali Logo" class="footer__logo-image" />
+          <span>Lotus <span>Bali</span></span>
+        </div>
+        <p class="footer__brand-desc" data-i18n="ft_desc">Mitra terpercaya transportasi & wisata di Bali. Melayani dengan hati sejak 2016.</p>
+        <div class="social-links">
+          <a href="#" class="social-link"><i data-lucide="instagram" width="18" height="18"></i></a>
+          <a href="#" class="social-link"><i data-lucide="facebook" width="18" height="18"></i></a>
+          <a href="#" class="social-link"><i data-lucide="youtube" width="18" height="18"></i></a>
+          <a href="https://wa.me/62817168742" class="social-link"><i data-lucide="message-circle" width="18" height="18"></i></a>
+        </div>
+      </div>
+      <div>
+        <h3 class="footer__col-title" data-i18n="ft_menu">Menu</h3>
+        <ul class="footer__links">
+          <li><a href="home.html" class="footer__link" data-i18n="nav_home">Home</a></li>
+          <li><a href="tentang.html" class="footer__link" data-i18n="nav_tentang">Tentang Kami</a></li>
+          <li><a href="paket.html" class="footer__link" data-i18n="nav_paket">Paket Wisata</a></li>
+          <li><a href="mobil.html" class="footer__link" data-i18n="nav_mobil">Pilihan Mobil</a></li>
+          <li><a href="hubungi.html" class="footer__link" data-i18n="nav_hubungi">Hubungi</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="footer__col-title" data-i18n="ft_paket">Paket Wisata</h3>
+        <ul class="footer__links">
+          <li><a href="paket.html" class="footer__link">Ubud Full Day</a></li>
+          <li><a href="paket.html" class="footer__link">Kintamani Tour</a></li>
+          <li><a href="paket.html" class="footer__link">Nusa Penida Trip</a></li>
+          <li><a href="paket.html" class="footer__link">East Bali Tour</a></li>
+          <li><a href="paket.html" class="footer__link">Waterfall Explorer</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="footer__col-title" data-i18n="ft_contact">Kontak</h3>
+        <div class="footer__contact-item"><i data-lucide="map-pin" width="16" height="16"></i><span>Jl. Sunset Road No. 88, Kuta, Bali</span></div>
+        <div class="footer__contact-item"><i data-lucide="message-circle" width="16" height="16"></i><a href="https://wa.me/62817168742">+62 817168742</a></div>
+        <div class="footer__contact-item"><i data-lucide="mail" width="16" height="16"></i><a href="mailto:hello@lotusbali.com">hello@lotusbali.com</a></div>
+        <div class="footer__contact-item"><i data-lucide="clock" width="16" height="16"></i><span data-i18n="hours_val">24 Jam / 7 Hari</span></div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>&copy; <span class="js-year"></span> <span data-i18n="ft_copy">Lotus Bali. All rights reserved.</span></p>
+      <a href="#" class="footer__bottom-link" data-i18n="ft_top">Kembali ke atas ↑</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/script.js"></script>
+<script>document.addEventListener('DOMContentLoaded', () => lucide.createIcons());</script>
+</body>
+</html>
