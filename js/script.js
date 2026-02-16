@@ -1006,6 +1006,74 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.js-reveal').forEach(el => {
       const rect = el.getBoundingClientRect();
       if (rect.top < window.innerHeight) el.classList.add('js-reveal--visible');
+      /* ============================
+   FORM STEP INDICATOR
+============================ */
+
+const nameInput  = document.querySelector("#f_name");
+const phoneInput = document.querySelector("#f_phone");
+const dateInput  = document.querySelector("#f_date");
+const carInput   = document.querySelector("#f_car");
+
+const step1 = document.querySelector('[data-step="1"]');
+const step2 = document.querySelector('[data-step="2"]');
+const line  = document.querySelector('.form-line');
+
+if(nameInput && phoneInput && step1 && step2 && line){
+
+  function updateStep(){
+    if(nameInput.value.trim() !== "" && phoneInput.value.trim() !== ""){
+      step1.classList.add("active");
+      step2.classList.add("active");
+      line.classList.add("active");
+    } else {
+      step1.classList.add("active");
+      step2.classList.remove("active");
+      line.classList.remove("active");
+    }
+  }
+
+  [nameInput, phoneInput, dateInput, carInput].forEach(el=>{
+    if(el){
+      el.addEventListener("input", updateStep);
+    }
+  });
+
+}
     });
   }, 120);
 });
+/* ============================
+   BOOKING SUMMARY PREVIEW
+============================ */
+
+const sumBox  = document.querySelector("#bookingSummary");
+
+const sName   = document.querySelector("#f_name");
+const sPhone  = document.querySelector("#f_phone");
+const sCar    = document.querySelector("#f_car");
+const sTour   = document.querySelector("#f_tour");
+const sDate   = document.querySelector("#f_date");
+const sPickup = document.querySelector("#f_location");
+
+if(sumBox){
+
+function updateSummary(){
+  sumBox.innerHTML = `
+    <h3>📋 Ringkasan Pesanan</h3>
+    <p><b>Nama:</b> ${sName?.value || "-"}</p>
+    <p><b>No HP:</b> ${sPhone?.value || "-"}</p>
+    <p><b>Kendaraan:</b> ${sCar?.value || "-"}</p>
+    <p><b>Paket:</b> ${sTour?.value || "-"}</p>
+    <p><b>Tanggal:</b> ${sDate?.value || "-"}</p>
+    <p><b>Pickup:</b> ${sPickup?.value || "-"}</p>
+  `;
+}
+
+[sName,sPhone,sCar,sTour,sDate,sPickup].forEach(el=>{
+  if(el){
+    el.addEventListener("input", updateSummary);
+  }
+});
+
+}

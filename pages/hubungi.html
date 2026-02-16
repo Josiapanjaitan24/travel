@@ -127,7 +127,11 @@
         <div class="booking-form">
           <h2 class="booking-form__title" data-i18n="form_title">📋 Form Pemesanan</h2>
           <p class="booking-form__subtitle" data-i18n="form_subtitle">Isi form & kami akan menghubungi Anda via WhatsApp dalam hitungan menit</p>
-
+      <div class="form-steps">
+        <div class="form-step active" data-step="1">1. Data Diri</div>
+         <div class="form-line"></div>
+           <div class="form-step" data-step="2">2. Detail Trip</div>
+      </div>
           <form id="bookingForm" novalidate autocomplete="off">
 
             <!-- Row 1: Name + Phone -->
@@ -228,6 +232,10 @@
             </p>
 
           </form>
+          <div class="booking-summary" id="bookingSummary">
+           <h3>📋 Ringkasan Pesanan</h3>
+            <p>Isi form untuk melihat ringkasan...</p>
+        </div>
         </div>
       </div><!-- /booking-form wrapper -->
 
