@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Paket Wisata Bali – Pilihan lengkap tour dari Lotus Bali" />
+  <title>Paket Wisata – Lotus Bali</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="icon" type="image/png" href="../assets/icon.png">
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav id="navbar" class="navbar navbar--inner">
+  <div class="navbar__container">
+    <a href="home.html" class="navbar__logo">
+      <div class="navbar__logo-icon">
+        <img src="../assets/icon.png" alt="Lotus Bali Logo" class="navbar__logo-image" />
+      </div>
+      <div class="navbar__logo-text">Lotus <span>Bali</span></div>
+    </a>
+    <ul class="navbar__menu" id="navMenu">
+      <li><a href="home.html"    class="navbar__link" data-i18n="nav_home">Home</a></li>
+      <li><a href="tentang.html" class="navbar__link" data-i18n="nav_tentang">Tentang Kami</a></li>
+      <li><a href="paket.html"   class="navbar__link navbar__link--active" data-i18n="nav_paket">Paket Wisata</a></li>
+      <li><a href="mobil.html"   class="navbar__link" data-i18n="nav_mobil">Pilihan Mobil</a></li>
+      <li><a href="hubungi.html" class="navbar__link" data-i18n="nav_hubungi">Hubungi</a></li>
+    </ul>
+    <div class="navbar__controls">
+      <div class="lang-toggle">
+        <button class="lang-toggle__btn lang-toggle__btn--active" data-lang="id">ID</button>
+        <button class="lang-toggle__btn" data-lang="en">EN</button>
+      </div>
+      <button class="navbar__hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="container">
+    <div class="page-hero__content">
+      <span class="page-hero__eyebrow" data-i18n="paket_eyebrow">Jelajahi Bali</span>
+      <h1 class="page-hero__title" data-i18n="paket_title">Paket Wisata Populer</h1>
+      <p class="page-hero__subtitle" data-i18n="paket_subtitle">Pilih paket impian Anda dan biarkan kami mengurus semua detail perjalanan</p>
+    </div>
+  </div>
+</section>
+
+<!-- ALL TOURS GRID -->
+<section class="section">
+  <div class="container">
+    <div class="tours__grid">
+
+      <!-- Tour 1: Ubud -->
+      <article class="tour-card js-reveal js-reveal--delay-1">
+        <div class="tour-card__image-wrap">
+          <div class="tour-card__image-placeholder img-ph img-ph--ubud">🌿</div>
+          <div class="tour-card__badge tour-card__badge--popular" data-i18n="t1_badge">Terpopuler</div>
+        </div>
+        <div class="tour-card__body">
+          <h3 class="tour-card__title" data-i18n="t1_title">Ubud Full Day Tour</h3>
+          <p class="tour-card__desc" data-i18n="t1_desc">Tegalalang Rice Terrace, Monkey Forest, Ubud Palace, dan pasar tradisional eksotis.</p>
+          <div class="tour-card__meta">
+            <span class="tour-card__meta-item"><i data-lucide="clock" width="14" height="14"></i><span data-i18n="t1_dur">8 Jam</span></span>
+            <span class="tour-card__meta-item"><i data-lucide="users" width="14" height="14"></i><span data-i18n="t1_pax">Max 6 Pax</span></span>
+          </div>
+          <div class="tour-card__footer">
+            <div>
+              <span class="tour-card__price-label" data-i18n="from_lbl">Mulai dari</span>
+              <span class="tour-card__price-value" data-i18n="t1_price">Rp 550.000</span>
+            </div>
+            <button class="btn btn--primary btn--sm" data-select-tour="Ubud Full Day Tour" data-i18n="book_btn">Pesan Paket</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Tour 2: Kintamani -->
+      <article class="tour-card js-reveal js-reveal--delay-2">
+        <div class="tour-card__image-wrap">
+          <div class="tour-card__image-placeholder img-ph img-ph--kintamani">🌋</div>
+          <div class="tour-card__badge tour-card__badge--new" data-i18n="t2_badge">Baru</div>
+        </div>
+        <div class="tour-card__body">
+          <h3 class="tour-card__title" data-i18n="t2_title">Kintamani Volcano Tour</h3>
+          <p class="tour-card__desc" data-i18n="t2_desc">Panorama Gunung Batur & Danau Batur yang memukau, dengan makan siang restoran tepi danau.</p>
+          <div class="tour-card__meta">
+            <span class="tour-card__meta-item"><i data-lucide="clock" width="14" height="14"></i><span data-i18n="t2_dur">9 Jam</span></span>
+            <span class="tour-card__meta-item"><i data-lucide="users" width="14" height="14"></i><span data-i18n="t2_pax">Max 6 Pax</span></span>
+          </div>
+          <div class="tour-card__footer">
+            <div>
+              <span class="tour-card__price-label" data-i18n="from_lbl">Mulai dari</span>
+              <span class="tour-card__price-value" data-i18n="t2_price">Rp 600.000</span>
+            </div>
+            <button class="btn btn--primary btn--sm" data-select-tour="Kintamani Volcano Tour" data-i18n="book_btn">Pesan Paket</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Tour 3: Tanah Lot -->
+      <article class="tour-card js-reveal js-reveal--delay-3">
+        <div class="tour-card__image-wrap">
+          <div class="tour-card__image-placeholder img-ph img-ph--tanah-lot">⛩️</div>
+        </div>
+        <div class="tour-card__body">
+          <h3 class="tour-card__title" data-i18n="t3_title">Tanah Lot Sunset Tour</h3>
+          <p class="tour-card__desc" data-i18n="t3_desc">Nikmati sunset romantis di Pura Tanah Lot dan eksplorasi premium Seminyak & Canggu.</p>
+          <div class="tour-card__meta">
+            <span class="tour-card__meta-item"><i data-lucide="clock" width="14" height="14"></i><span data-i18n="t3_dur">7 Jam</span></span>
+            <span class="tour-card__meta-item"><i data-lucide="users" width="14" height="14"></i><span data-i18n="t3_pax">Max 6 Pax</span></span>
+          </div>
+          <div class="tour-card__footer">
+            <div>
+              <span class="tour-card__price-label" data-i18n="from_lbl">Mulai dari</span>
+              <span class="tour-card__price-value" data-i18n="t3_price">Rp 500.000</span>
+            </div>
+            <button class="btn btn--primary btn--sm" data-select-tour="Tanah Lot Sunset Tour" data-i18n="book_btn">Pesan Paket</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Tour 4: East Bali -->
+      <article class="tour-card js-reveal js-reveal--delay-1">
+        <div class="tour-card__image-wrap">
+          <div class="tour-card__image-placeholder img-ph img-ph--east">🏯</div>
+        </div>
+        <div class="tour-card__body">
+          <h3 class="tour-card__title" data-i18n="t4_title">East Bali Spectacular</h3>
+          <p class="tour-card__desc" data-i18n="t4_desc">Pura Besakih (Ibu dari segala pura), Taman Ujung, pantai timur Bali yang masih asri.</p>
+          <div class="tour-card__meta">
+            <span class="tour-card__meta-item"><i data-lucide="clock" width="14" height="14"></i><span data-i18n="t4_dur">10 Jam</span></span>
+            <span class="tour-card__meta-item"><i data-lucide="users" width="14" height="14"></i><span data-i18n="t4_pax">Max 6 Pax</span></span>
+          </div>
+          <div class="tour-card__footer">
+            <div>
+              <span class="tour-card__price-label" data-i18n="from_lbl">Mulai dari</span>
+              <span class="tour-card__price-value" data-i18n="t4_price">Rp 700.000</span>
+            </div>
+            <button class="btn btn--primary btn--sm" data-select-tour="East Bali Spectacular" data-i18n="book_btn">Pesan Paket</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Tour 5: Nusa Penida -->
+      <article class="tour-card js-reveal js-reveal--delay-2">
+        <div class="tour-card__image-wrap">
+          <div class="tour-card__image-placeholder img-ph img-ph--nusa">🏝️</div>
+          <div class="tour-card__badge tour-card__badge--hot" data-i18n="t5_badge">Hot Deal</div>
+        </div>
+        <div class="tour-card__body">
+          <h3 class="tour-card__title" data-i18n="t5_title">Nusa Penida Day Trip</h3>
+          <p class="tour-card__desc" data-i18n="t5_desc">Kelingking Beach, Angel's Billabong & Broken Beach di Nusa Penida yang spektakuler.</p>
+          <div class="tour-card__meta">
+            <span class="tour-card__meta-item"><i data-lucide="clock" width="14" height="14"></i><span data-i18n="t5_dur">12 Jam</span></span>
+            <span class="tour-card__meta-item"><i data-lucide="users" width="14" height="14"></i><span data-i18n="t5_pax">Max 4 Pax</span></span>
+          </div>
+          <div class="tour-card__footer">
+            <div>
+              <span class="tour-card__price-label" data-i18n="from_lbl">Mulai dari</span>
+              <span class="tour-card__price-value" data-i18n="t5_price">Rp 850.000</span>
+            </div>
+            <button class="btn btn--primary btn--sm" data-select-tour="Nusa Penida Day Trip" data-i18n="book_btn">Pesan Paket</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Tour 6: Waterfall -->
+      <article class="tour-card js-reveal js-reveal--delay-3">
+        <div class="tour-card__image-wrap">
+          <div class="tour-card__image-placeholder img-ph img-ph--waterfall">💧</div>
+        </div>
+        <div class="tour-card__body">
+          <h3 class="tour-card__title" data-i18n="t6_title">Bali Waterfall Explorer</h3>
+          <p class="tour-card__desc" data-i18n="t6_desc">Air terjun tersembunyi Bali – Sekumpul, Gitgit, Nungnung di hutan tropis yang sejuk.</p>
+          <div class="tour-card__meta">
+            <span class="tour-card__meta-item"><i data-lucide="clock" width="14" height="14"></i><span data-i18n="t6_dur">10 Jam</span></span>
+            <span class="tour-card__meta-item"><i data-lucide="users" width="14" height="14"></i><span data-i18n="t6_pax">Max 5 Pax</span></span>
+          </div>
+          <div class="tour-card__footer">
+            <div>
+              <span class="tour-card__price-label" data-i18n="from_lbl">Mulai dari</span>
+              <span class="tour-card__price-value" data-i18n="t6_price">Rp 650.000</span>
+            </div>
+            <button class="btn btn--primary btn--sm" data-select-tour="Bali Waterfall Explorer" data-i18n="book_btn">Pesan Paket</button>
+          </div>
+        </div>
+      </article>
+
+    </div><!-- /tours__grid -->
+
+    <!-- Custom package CTA -->
+    <div class="js-reveal" style="margin-top:64px;background:var(--gradient-brand);border-radius:24px;padding:48px;text-align:center;box-shadow:var(--shadow-lg);">
+      <h2 style="color:white;margin-bottom:12px;">Ingin Itinerary Custom?</h2>
+      <p style="color:rgba(255,255,255,0.75);max-width:500px;margin:0 auto 28px;">Kami siap merancang paket wisata sesuai keinginan Anda. Hubungi kami dan ceritakan impian perjalanan Bali Anda.</p>
+      <a href="hubungi.html" class="btn btn--gold btn--lg">
+        <i data-lucide="sparkles" width="18" height="18"></i>
+        Buat Paket Custom
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div>
+        <div class="footer__logo">
+          <img src="../assets/icon.png" alt="Lotus Bali Logo" class="footer__logo-image" />
+          <span>Lotus <span>Bali</span></span>
+        </div>
+        <p class="footer__brand-desc" data-i18n="ft_desc">Mitra terpercaya transportasi & wisata di Bali. Melayani dengan hati sejak 2016.</p>
+        <div class="social-links">
+          <a href="#" class="social-link"><i data-lucide="instagram" width="18" height="18"></i></a>
+          <a href="#" class="social-link"><i data-lucide="facebook" width="18" height="18"></i></a>
+          <a href="#" class="social-link"><i data-lucide="youtube" width="18" height="18"></i></a>
+          <a href="https://wa.me/62817168742" class="social-link"><i data-lucide="message-circle" width="18" height="18"></i></a>
+        </div>
+      </div>
+      <div>
+        <h3 class="footer__col-title" data-i18n="ft_menu">Menu</h3>
+        <ul class="footer__links">
+          <li><a href="home.html" class="footer__link" data-i18n="nav_home">Home</a></li>
+          <li><a href="tentang.html" class="footer__link" data-i18n="nav_tentang">Tentang Kami</a></li>
+          <li><a href="paket.html" class="footer__link" data-i18n="nav_paket">Paket Wisata</a></li>
+          <li><a href="mobil.html" class="footer__link" data-i18n="nav_mobil">Pilihan Mobil</a></li>
+          <li><a href="hubungi.html" class="footer__link" data-i18n="nav_hubungi">Hubungi</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="footer__col-title" data-i18n="ft_paket">Paket Wisata</h3>
+        <ul class="footer__links">
+          <li><a href="paket.html" class="footer__link">Ubud Full Day</a></li>
+          <li><a href="paket.html" class="footer__link">Kintamani Tour</a></li>
+          <li><a href="paket.html" class="footer__link">Nusa Penida Trip</a></li>
+          <li><a href="paket.html" class="footer__link">East Bali Tour</a></li>
+          <li><a href="paket.html" class="footer__link">Waterfall Explorer</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="footer__col-title" data-i18n="ft_contact">Kontak</h3>
+        <div class="footer__contact-item"><i data-lucide="map-pin" width="16" height="16"></i><span>Jl. Sunset Road No. 88, Kuta, Bali</span></div>
+        <div class="footer__contact-item"><i data-lucide="message-circle" width="16" height="16"></i><a href="https://wa.me/62817168742">+62 817168742</a></div>
+        <div class="footer__contact-item"><i data-lucide="mail" width="16" height="16"></i><a href="mailto:hello@lotusbali.com">hello@lotusbali.com</a></div>
+        <div class="footer__contact-item"><i data-lucide="clock" width="16" height="16"></i><span data-i18n="hours_val">24 Jam / 7 Hari</span></div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>&copy; <span class="js-year"></span> <span data-i18n="ft_copy">Lotus Bali. All rights reserved.</span></p>
+      <a href="#" class="footer__bottom-link" data-i18n="ft_top">Kembali ke atas ↑</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/script.js"></script>
+<script>document.addEventListener('DOMContentLoaded', () => lucide.createIcons());</script>
+</body>
+</html>
