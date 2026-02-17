@@ -54,7 +54,22 @@ const LOTUS_TRANSLATIONS = {
         "alert.detail_package_pick_car": "Silakan pilih mobil atau pilih opsi tanpa sewa mobil.",
         "alert.rental_required": "Mohon lengkapi data wajib booking rental terlebih dahulu.",
         "alert.availability_date": "Silakan pilih tanggal ketersediaan terlebih dahulu.",
-        "alert.contact_required": "Harap isi Nama dan Pesan Anda."
+        "alert.contact_required": "Harap isi Nama dan Pesan Anda.",
+        "floating.whatsapp": "Chat WhatsApp",
+        "floating.whatsapp_aria": "Buka chat WhatsApp Lotus Bali",
+        "faq.eyebrow": "FAQ",
+        "faq.title": "Pertanyaan Yang Sering Ditanyakan",
+        "faq.subtitle": "Kalau masih ada yang belum jelas, kirim pertanyaan Anda lewat WhatsApp.",
+        "faq.q1": "Apa saja yang sudah termasuk di harga paket tour?",
+        "faq.a1": "Umumnya sudah termasuk mobil + driver, BBM, parkir area standar, dan itinerary sesuai paket. Detail lengkap ada di halaman detail paket.",
+        "faq.q2": "Apakah bisa custom itinerary sesuai request?",
+        "faq.a2": "Bisa. Anda bisa kirim area tujuan, durasi, dan preferensi trip, lalu tim kami bantu susun rute terbaik.",
+        "faq.q3": "Bagaimana sistem booking dan pembayarannya?",
+        "faq.a3": "Booking dilakukan via WhatsApp. Setelah data trip dikonfirmasi, Anda akan menerima detail pembayaran beserta ringkasan pesanan.",
+        "faq.q4": "Apakah ada biaya tambahan overtime?",
+        "faq.a4": "Ada, jika durasi layanan melebihi ketentuan paket/rental. Besaran overtime diinformasikan transparan sebelum konfirmasi final.",
+        "faq.q5": "Bisa jemput di bandara atau hotel?",
+        "faq.a5": "Bisa. Kami melayani penjemputan dari bandara, hotel, villa, atau titik temu lain sesuai kesepakatan."
     },
     en: {
         "nav.home": "Home",
@@ -72,7 +87,22 @@ const LOTUS_TRANSLATIONS = {
         "alert.detail_package_pick_car": "Please choose a car or select no car rental.",
         "alert.rental_required": "Please complete all required rental booking fields first.",
         "alert.availability_date": "Please select an available date first.",
-        "alert.contact_required": "Please fill in your Name and Message."
+        "alert.contact_required": "Please fill in your Name and Message.",
+        "floating.whatsapp": "Chat WhatsApp",
+        "floating.whatsapp_aria": "Open Lotus Bali WhatsApp chat",
+        "faq.eyebrow": "FAQ",
+        "faq.title": "Frequently Asked Questions",
+        "faq.subtitle": "If anything is still unclear, send your question via WhatsApp.",
+        "faq.q1": "What is included in the tour package price?",
+        "faq.a1": "It usually includes car + driver, fuel, standard area parking, and an itinerary based on the package. Full details are available on the package detail page.",
+        "faq.q2": "Can I request a custom itinerary?",
+        "faq.a2": "Yes. Share your destination area, trip duration, and preferences, and our team will help arrange the best route.",
+        "faq.q3": "How do booking and payment work?",
+        "faq.a3": "Booking is handled through WhatsApp. Once trip details are confirmed, you will receive payment details and an order summary.",
+        "faq.q4": "Is there an overtime charge?",
+        "faq.a4": "Yes, if service duration exceeds the package/rental terms. Overtime rates are informed transparently before final confirmation.",
+        "faq.q5": "Can you pick us up from the airport or hotel?",
+        "faq.a5": "Yes. We provide pickup from the airport, hotel, villa, or another agreed meeting point."
     }
 };
 const PAGE_TRANSLATIONS = {
@@ -149,10 +179,10 @@ const PAGE_TRANSLATIONS = {
         entries: [
             { selector: "main section:nth-of-type(1) p.text-xs", text: { id: "Pilihan Paket", en: "Package Options" } },
             { selector: "main section:nth-of-type(1) h1", text: { id: "Pilih Paket Yang Kamu Suka", en: "Choose Your Favorite Package" } },
-            { selector: "main section:nth-of-type(1) p.max-w-3xl", html: { id: "Halaman ini khusus untuk melihat pilihan paket dan ringkasan singkat. Untuk detail lengkap + form booking, klik tombol <strong>Lihat Detail</strong>.", en: "This page is for viewing package options and short summaries. For full details + booking form, click <strong>View Details</strong>." } },
-            { selector: "main section:nth-of-type(2) article:nth-child(1) a", text: { id: "Lihat Detail", en: "View Details" } },
-            { selector: "main section:nth-of-type(2) article:nth-child(2) a", text: { id: "Lihat Detail", en: "View Details" } },
-            { selector: "main section:nth-of-type(2) article:nth-child(3) a", text: { id: "Lihat Detail", en: "View Details" } },
+            { selector: "main section:nth-of-type(1) p.max-w-3xl", html: { id: "Halaman ini khusus untuk melihat pilihan paket dan ringkasan singkat. Untuk detail lengkap + form booking, klik tombol <strong>Lihat Detail & Booking</strong>.", en: "This page is for viewing package options and short summaries. For full details + booking form, click <strong>View Details & Book</strong>." } },
+            { selector: "main section:nth-of-type(2) article:nth-child(1) a", text: { id: "Lihat Detail & Booking", en: "View Details & Book" } },
+            { selector: "main section:nth-of-type(2) article:nth-child(2) a", text: { id: "Lihat Detail & Booking", en: "View Details & Book" } },
+            { selector: "main section:nth-of-type(2) article:nth-child(3) a", text: { id: "Lihat Detail & Booking", en: "View Details & Book" } },
             { selector: "main section:nth-of-type(2) article:nth-child(1) p:nth-of-type(2)", html: { id: '<i class="fa-regular fa-clock text-teal-700 mr-2"></i>Durasi 2 Hari 1 Malam', en: '<i class="fa-regular fa-clock text-teal-700 mr-2"></i>Duration 2 Days 1 Night' } },
             { selector: "main section:nth-of-type(2) article:nth-child(1) p:nth-of-type(3)", html: { id: '<i class="fa-solid fa-list-check text-teal-700 mr-2"></i>Highlight: GWK, Pandawa, Tanah Lot', en: '<i class="fa-solid fa-list-check text-teal-700 mr-2"></i>Highlights: GWK, Pandawa, Tanah Lot' } },
             { selector: "main section:nth-of-type(2) article:nth-child(1) h3", text: { id: "Paket Tour Hemat 2H1M", en: "Budget Tour Package 2D1N" } },
@@ -169,10 +199,10 @@ const PAGE_TRANSLATIONS = {
         entries: [
             { selector: "main section:nth-of-type(1) p.text-xs", text: { id: "Pilihan Armada", en: "Fleet Options" } },
             { selector: "main section:nth-of-type(1) h1", text: { id: "Pilih Mobil Rental Favorit Anda", en: "Choose Your Favorite Rental Car" } },
-            { selector: "main section:nth-of-type(1) p.max-w-3xl", html: { id: "Halaman ini khusus daftar mobil dan ringkasan singkat. Untuk detail lengkap dan pengisian form booking, klik tombol <strong>Lihat Detail</strong>.", en: "This page lists vehicles and short summaries. For full details and booking form, click <strong>View Details</strong>." } },
-            { selector: "main section:nth-of-type(2) article:nth-child(1) a", text: { id: "Lihat Detail", en: "View Details" } },
-            { selector: "main section:nth-of-type(2) article:nth-child(2) a", text: { id: "Lihat Detail", en: "View Details" } },
-            { selector: "main section:nth-of-type(2) article:nth-child(3) a", text: { id: "Lihat Detail", en: "View Details" } },
+            { selector: "main section:nth-of-type(1) p.max-w-3xl", html: { id: "Halaman ini khusus daftar mobil dan ringkasan singkat. Untuk detail lengkap dan pengisian form booking, klik tombol <strong>Lihat Detail & Booking</strong>.", en: "This page lists vehicles and short summaries. For full details and booking form, click <strong>View Details & Book</strong>." } },
+            { selector: "main section:nth-of-type(2) article:nth-child(1) a", text: { id: "Lihat Detail & Booking", en: "View Details & Book" } },
+            { selector: "main section:nth-of-type(2) article:nth-child(2) a", text: { id: "Lihat Detail & Booking", en: "View Details & Book" } },
+            { selector: "main section:nth-of-type(2) article:nth-child(3) a", text: { id: "Lihat Detail & Booking", en: "View Details & Book" } },
             { selector: "main section:nth-of-type(2) article:nth-child(1) p:nth-of-type(1)", html: { id: '<i class="fa-solid fa-user-group text-teal-700 mr-2"></i>Kapasitas 4-5 orang', en: '<i class="fa-solid fa-user-group text-teal-700 mr-2"></i>Capacity 4-5 persons' } },
             { selector: "main section:nth-of-type(2) article:nth-child(1) p:nth-of-type(2)", html: { id: '<i class="fa-solid fa-suitcase text-teal-700 mr-2"></i>2 koper medium', en: '<i class="fa-solid fa-suitcase text-teal-700 mr-2"></i>2 medium suitcases' } },
             { selector: "main section:nth-of-type(2) article:nth-child(1) p:nth-of-type(3)", html: { id: '<i class="fa-solid fa-car-side text-teal-700 mr-2"></i>Cocok untuk city tour hemat', en: '<i class="fa-solid fa-car-side text-teal-700 mr-2"></i>Great for budget city tours' } },
@@ -1566,6 +1596,80 @@ function initPageLoaderTransitions() {
     });
 }
 
+function initFloatingWhatsAppButton() {
+    if (!document.body || document.querySelector("[data-wa-float]")) {
+        return;
+    }
+
+    const button = document.createElement("a");
+    button.setAttribute("data-wa-float", "true");
+    button.className = "wa-float";
+    button.href = `https://wa.me/${MY_NUMBER}?text=${encodeURIComponent("Halo Lotus Bali! Saya ingin konsultasi paket atau rental.")}`;
+    button.target = "_blank";
+    button.rel = "noopener noreferrer";
+    button.innerHTML = `<i class="fa-brands fa-whatsapp" aria-hidden="true"></i><span data-wa-float-label>${t("floating.whatsapp")}</span>`;
+    button.setAttribute("aria-label", t("floating.whatsapp_aria"));
+    button.classList.add("wa-float-hidden");
+    document.body.appendChild(button);
+
+    const syncLabel = (lang = getCurrentLanguage()) => {
+        const label = button.querySelector("[data-wa-float-label]");
+        if (label) {
+            label.textContent = t("floating.whatsapp", lang);
+        }
+        button.setAttribute("aria-label", t("floating.whatsapp_aria", lang));
+    };
+
+    document.addEventListener("lotus:language-change", (event) => {
+        syncLabel(event.detail?.lang);
+    });
+
+    const updateVisibility = () => {
+        const maxScrollable = document.documentElement.scrollHeight - window.innerHeight;
+        if (maxScrollable <= 0) {
+            button.classList.remove("wa-float-hidden");
+            return;
+        }
+
+        const scrollRatio = window.scrollY / maxScrollable;
+        button.classList.toggle("wa-float-hidden", scrollRatio < 0.15);
+    };
+
+    window.addEventListener("scroll", updateVisibility, { passive: true });
+    window.addEventListener("resize", updateVisibility);
+
+    syncLabel();
+    updateVisibility();
+}
+
+function initFaqAccordion() {
+    const faqItems = document.querySelectorAll("[data-faq-item]");
+    if (!faqItems.length) {
+        return;
+    }
+
+    faqItems.forEach((item) => {
+        const trigger = item.querySelector("[data-faq-trigger]");
+        const panel = item.querySelector("[data-faq-panel]");
+        const icon = item.querySelector("[data-faq-icon]");
+
+        if (!trigger || !panel) {
+            return;
+        }
+
+        trigger.addEventListener("click", () => {
+            const isExpanded = trigger.getAttribute("aria-expanded") === "true";
+            trigger.setAttribute("aria-expanded", isExpanded ? "false" : "true");
+            panel.classList.toggle("hidden", isExpanded);
+
+            if (icon) {
+                icon.classList.toggle("fa-plus", isExpanded);
+                icon.classList.toggle("fa-minus", !isExpanded);
+            }
+        });
+    });
+}
+
 // Fungsi WhatsApp untuk Paket & Rental
 function bookingWA(title, bookingKey) {
     let selectedDateText = "";
@@ -1628,6 +1732,8 @@ initInteractiveCards();
 initHeroParallax();
 initCtaGlow();
 initLanguageSwitcher();
+initFloatingWhatsAppButton();
+initFaqAccordion();
 initPageLoaderTransitions();
 
 
