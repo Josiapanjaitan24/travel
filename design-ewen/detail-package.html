@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Paket - Lotus Bali</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="aurora-bg" data-detail-package-page>
+    <nav class="fixed w-full z-50 transition-all duration-300 py-3 px-6 bg-transparent">
+        <div class="container mx-auto lotus-glass rounded-2xl py-2 px-4 md:px-5 border border-slate-300/30 shadow-sm">
+            <div class="flex justify-between items-center">
+                                <a href="index.html" class="ml-1 inline-flex items-center gap-2.5 md:gap-3 text-teal-600">
+                    <img src="assets/img/branding/logo.PNG" alt="Lotus Bali Logo" class="h-14 w-14 md:h-16 md:w-16 object-contain rounded-xl">
+                    <span class="text-2xl font-black leading-none">LOTUS</span>
+                </a>
+                <ul class="hidden md:flex items-center space-x-8 font-bold text-white drop-shadow-[0_1px_2px_rgba(2,6,23,0.8)]">
+                    <li><a href="index.html" class="hover:text-sky-300 transition" data-i18n="nav.home">Home</a></li>
+                    <li><a href="about.html" class="hover:text-sky-300 transition" data-i18n="nav.about">About</a></li>
+                    <li><a href="packages.html" class="text-sky-300" data-i18n="nav.packages">Packages</a></li>
+                    <li><a href="rental.html" class="hover:text-sky-300 transition" data-i18n="nav.rental">Rental</a></li>
+                </ul>
+                <div class="flex items-center gap-2 md:gap-3">
+                    <div class="inline-flex items-center rounded-xl border border-white/25 bg-slate-900/20 p-1 backdrop-blur-sm">
+                        <button type="button" data-lang-switch="id" class="lang-switch-btn rounded-lg px-2.5 py-1 text-xs font-bold text-white/85">ID</button>
+                        <button type="button" data-lang-switch="en" class="lang-switch-btn rounded-lg px-2.5 py-1 text-xs font-bold text-white/85">EN</button>
+                    </div>
+                    <a href="contact.html" class="hidden sm:inline-block bg-teal-600 text-white px-6 py-2 rounded-xl font-bold hover:bg-teal-700 transition" data-i18n="nav.contact_us">Contact Us</a>
+                    <button type="button" data-mobile-toggle="mobileMenu" aria-expanded="false" class="md:hidden h-10 w-10 rounded-xl border border-teal-200 text-teal-700">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+            <div id="mobileMenu" class="md:hidden hidden pt-3">
+                <div class="grid gap-2 font-semibold text-white rounded-xl p-2 bg-slate-900/20 border border-white/15 backdrop-blur-sm">
+                    <a href="index.html" class="px-3 py-2 rounded-lg text-white/95 hover:bg-white/15 hover:text-white transition" data-i18n="nav.home">Home</a>
+                    <a href="about.html" class="px-3 py-2 rounded-lg text-white/95 hover:bg-white/15 hover:text-white transition" data-i18n="nav.about">About</a>
+                    <a href="packages.html" class="px-3 py-2 rounded-lg bg-white/90 text-sky-900 font-bold shadow-sm" data-i18n="nav.packages">Packages</a>
+                    <a href="rental.html" class="px-3 py-2 rounded-lg text-white/95 hover:bg-white/15 hover:text-white transition" data-i18n="nav.rental">Rental</a>
+                    <a href="contact.html" class="px-3 py-2 rounded-lg text-white/95 hover:bg-white/15 hover:text-white transition" data-i18n="nav.contact">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container mx-auto px-6 pt-36 pb-20">
+        <section class="mb-8">
+            <a href="packages.html" class="inline-flex items-center gap-2 text-sm font-bold text-teal-700 hover:text-teal-600">
+                <i class="fa-solid fa-arrow-left"></i> Kembali ke daftar paket
+            </a>
+        </section>
+
+        <section class="grid lg:grid-cols-2 gap-8 mb-10">
+            <div class="section-shell overflow-hidden h-full">
+                <img id="detailPackageImage" src="" alt="Detail paket Lotus Bali" class="w-full h-full min-h-[420px] object-cover">
+            </div>
+            <div class="section-shell p-7 md:p-8">
+                <p class="text-xs uppercase tracking-[0.18em] text-teal-700 font-bold mb-3">Detail Paket</p>
+                <h1 id="detailPackageName" class="heading-font text-5xl text-slate-900 mb-3">-</h1>
+                <p id="detailPackageMeta" class="text-slate-600 mb-5">-</p>
+                <div class="flex items-end gap-4 mb-6">
+                    <p id="detailPackageOldPrice" class="text-xl line-through text-slate-400">-</p>
+                    <p id="detailPackagePrice" class="text-4xl font-black text-teal-700">-</p>
+                </div>
+                <p id="detailPackageDescription" class="text-slate-700 leading-relaxed mb-5">-</p>
+                <div class="mb-5">
+                    <p class="text-sm font-bold text-slate-800 mb-2">Highlight Pengalaman</p>
+                    <div id="detailPackageHighlights" class="flex flex-wrap gap-2"></div>
+                </div>
+                <div class="p-4 rounded-xl bg-white border border-slate-200 text-sm text-slate-700 mb-4">
+                    <p><strong>Cocok Untuk:</strong> <span id="detailPackageSuitable">-</span></p>
+                </div>
+                <div class="p-4 rounded-xl bg-teal-50 border border-teal-100 text-sm text-slate-700">
+                    <p><strong>Catatan:</strong> Harga di atas merupakan harga mulai per orang. Total biaya akan disesuaikan jumlah peserta dan request tambahan.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-shell p-7 md:p-8 mb-10">
+            <h2 class="text-2xl font-extrabold mb-5">Ringkasan Program</h2>
+            <div class="grid lg:grid-cols-4 gap-5">
+                <div class="p-5 rounded-2xl bg-teal-50 border border-teal-100">
+                    <h3 class="font-bold mb-3">Itinerary</h3>
+                    <ul id="detailPackageItinerary" class="text-sm text-slate-700 space-y-2 list-disc list-inside"></ul>
+                </div>
+                <div class="p-5 rounded-2xl bg-white border border-slate-200">
+                    <h3 class="font-bold mb-3">Termasuk</h3>
+                    <ul id="detailPackageIncludes" class="text-sm text-slate-700 space-y-2 list-disc list-inside"></ul>
+                </div>
+                <div class="p-5 rounded-2xl bg-white border border-slate-200">
+                    <h3 class="font-bold mb-3">Belum Termasuk</h3>
+                    <ul id="detailPackageExcludes" class="text-sm text-slate-700 space-y-2 list-disc list-inside"></ul>
+                </div>
+                <div class="p-5 rounded-2xl bg-white border border-slate-200">
+                    <h3 class="font-bold mb-3">Ketentuan & Info</h3>
+                    <ul id="detailPackageTerms" class="text-sm text-slate-700 space-y-2 list-disc list-inside"></ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-shell p-7 md:p-8">
+            <h2 class="text-2xl font-extrabold mb-5">Form Booking Paket</h2>
+            <form id="detailPackageBookingForm" class="space-y-6">
+                <input type="hidden" id="dpPackageName">
+                <input type="hidden" id="dpPackageDuration">
+                <input type="hidden" id="dpPackagePrice">
+                <input type="hidden" id="dpSelectedCar">
+                <input type="hidden" id="dpSelectedCarPrice">
+
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div>
+                        <label for="dpName" class="block text-sm font-bold text-slate-700 mb-2">Nama Lengkap</label>
+                        <input id="dpName" type="text" class="w-full p-4 rounded-xl border border-slate-200 bg-slate-50 focus:ring-2 focus:ring-teal-500 outline-none" required>
+                    </div>
+                    <div>
+                        <label for="dpPhone" class="block text-sm font-bold text-slate-700 mb-2">No. WhatsApp</label>
+                        <input id="dpPhone" type="tel" class="w-full p-4 rounded-xl border border-slate-200 bg-slate-50 focus:ring-2 focus:ring-teal-500 outline-none" placeholder="08xxxxxxxxxx" required>
+                    </div>
+                    <div>
+                        <label for="dpDate" class="block text-sm font-bold text-slate-700 mb-2">Tanggal Tour</label>
+                        <input id="dpDate" type="date" class="w-full p-4 rounded-xl border border-slate-200 bg-slate-50 focus:ring-2 focus:ring-teal-500 outline-none" required>
+                    </div>
+                    <div>
+                        <label for="dpParticipants" class="block text-sm font-bold text-slate-700 mb-2">Jumlah Peserta</label>
+                        <input id="dpParticipants" type="number" min="1" class="w-full p-4 rounded-xl border border-slate-200 bg-slate-50 focus:ring-2 focus:ring-teal-500 outline-none" required>
+                    </div>
+                </div>
+
+                <div>
+                    <label for="dpPickup" class="block text-sm font-bold text-slate-700 mb-2">Lokasi Jemput</label>
+                    <input id="dpPickup" type="text" class="w-full p-4 rounded-xl border border-slate-200 bg-slate-50 focus:ring-2 focus:ring-teal-500 outline-none" placeholder="Contoh: Hotel area Kuta / Bandara Ngurah Rai" required>
+                </div>
+
+                <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200">
+                    <p class="font-bold text-slate-900 mb-3">Butuh sewa mobil juga?</p>
+                    <div class="flex gap-4">
+                        <label class="inline-flex items-center gap-2">
+                            <input type="radio" name="dpNeedCar" value="yes" class="accent-teal-600">
+                            <span>Ya, saya ingin sewa mobil</span>
+                        </label>
+                        <label class="inline-flex items-center gap-2">
+                            <input type="radio" name="dpNeedCar" value="no" class="accent-teal-600" checked>
+                            <span>Tidak, skip saja</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div id="dpCarRentalSection" class="hidden">
+                    <div class="mb-4">
+                        <h3 class="text-xl font-extrabold mb-2">Pilih Mobil Favorit</h3>
+                        <p class="text-sm text-slate-600">Klik salah satu mobil di bawah untuk memilihnya.</p>
+                    </div>
+
+                    <div class="grid lg:grid-cols-3 gap-4 mb-5">
+                        <article class="vehicle-option" data-dp-vehicle-option data-car-name="Toyota Avanza" data-car-price="Mulai IDR 650.000 / 10 jam">
+                            <img src="https://images.unsplash.com/photo-1616455579100-2ceaa4eb2d37?auto=format&fit=crop&w=1200&q=80" alt="Toyota Avanza" class="w-full h-40 object-cover">
+                            <div class="p-4">
+                                <h4 class="font-extrabold mb-1">Toyota Avanza</h4>
+                                <p class="text-xs text-slate-500 mb-3">Ideal untuk city tour keluarga kecil.</p>
+                                <p class="text-sm font-bold text-teal-700">Mulai IDR 650.000 / 10 jam</p>
+                            </div>
+                        </article>
+
+                        <article class="vehicle-option" data-dp-vehicle-option data-car-name="Toyota Innova Reborn" data-car-price="Mulai IDR 900.000 / 10 jam">
+                            <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=1200&q=80" alt="Toyota Innova Reborn" class="w-full h-40 object-cover">
+                            <div class="p-4">
+                                <h4 class="font-extrabold mb-1">Toyota Innova Reborn</h4>
+                                <p class="text-xs text-slate-500 mb-3">Paling nyaman untuk trip antar area Bali.</p>
+                                <p class="text-sm font-bold text-teal-700">Mulai IDR 900.000 / 10 jam</p>
+                            </div>
+                        </article>
+
+                        <article class="vehicle-option" data-dp-vehicle-option data-car-name="Toyota Hiace" data-car-price="Mulai IDR 1.300.000 / 10 jam">
+                            <img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=1200&q=80" alt="Toyota Hiace" class="w-full h-40 object-cover">
+                            <div class="p-4">
+                                <h4 class="font-extrabold mb-1">Toyota Hiace</h4>
+                                <p class="text-xs text-slate-500 mb-3">Cocok untuk rombongan 8-14 orang.</p>
+                                <p class="text-sm font-bold text-teal-700">Mulai IDR 1.300.000 / 10 jam</p>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div>
+                            <label for="dpCarDuration" class="block text-sm font-bold text-slate-700 mb-2">Durasi Sewa Mobil</label>
+                            <select id="dpCarDuration" class="w-full p-4 rounded-xl border border-slate-200 bg-slate-50 focus:ring-2 focus:ring-teal-500 outline-none">
+                                <option value="Half Day (6 Jam)">Half Day (6 Jam)</option>
+                                <option value="Full Day (10 Jam)">Full Day (10 Jam)</option>
+                                <option value="Multi Day">Multi Day</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="dpCarNote" class="block text-sm font-bold text-slate-700 mb-2">Catatan Sewa Mobil (Opsional)</label>
+                            <input id="dpCarNote" type="text" class="w-full p-4 rounded-xl border border-slate-200 bg-slate-50 focus:ring-2 focus:ring-teal-500 outline-none" placeholder="Contoh: perlu child seat / kapasitas bagasi">
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <label for="dpNote" class="block text-sm font-bold text-slate-700 mb-2">Catatan Tambahan (Opsional)</label>
+                    <textarea id="dpNote" rows="4" class="w-full p-4 rounded-xl border border-slate-200 bg-slate-50 focus:ring-2 focus:ring-teal-500 outline-none" placeholder="Contoh: prefer itinerary santai, ada lansia, dll."></textarea>
+                </div>
+
+                <button type="submit" class="w-full bg-teal-600 text-white py-5 rounded-2xl font-black text-xl hover:bg-teal-700 transition shadow-xl">
+                    KIRIM DATA BOOKING KE WHATSAPP
+                </button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="border-t border-slate-200/70">
+        <div class="container mx-auto px-6 py-10 flex flex-col md:flex-row gap-5 items-center justify-between">
+            <p class="text-sm text-slate-500" data-i18n="footer.copyright">&copy; 2026 Lotus Bali Tour & Travel. All rights reserved.</p>
+            <div class="flex items-center gap-4 text-sm font-semibold text-slate-600">
+                <a href="index.html" class="hover:text-teal-700" data-i18n="nav.home">Home</a>
+                <a href="about.html" class="hover:text-teal-700" data-i18n="nav.about">About</a>
+                <a href="rental.html" class="hover:text-teal-700" data-i18n="nav.rental">Rental</a>
+                <a href="contact.html" class="hover:text-teal-700" data-i18n="nav.contact">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
