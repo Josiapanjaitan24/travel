@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detail Kendaraan - Lotus Bali</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="icon" type="image/png" href="../assets/icon.png">
+  <style>
+    :root {
+      --primary: #0d6efd;
+      --dark-blue: #1a2b3c;
+      --light-bg: #f8f9fa;
+      --success: #25d366;
+      --gold: #f1c40f;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background: var(--light-bg);
+      padding-top: 90px;
+    }
+
+    /* ============================================================
+       FIXED NAVBAR (Sesuai image_8bf9c4.png)
+       ============================================================ */
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: white;
+      height: 85px;
+      display: flex;
+      align-items: center;
+      box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+      z-index: 1000;
+    }
+
+    .navbar__container {
+      max-width: 1200px;
+      margin: 0 auto;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+    }
+
+    /* PERBAIKAN LOGO AGAR TIDAK TERPOTONG */
+    .navbar__logo {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      gap: 15px;
+      height: 60px; /* Memberi ruang cukup untuk icon */
+    }
+
+    .navbar__logo-image { 
+      height: 100%; /* Mengikuti tinggi container logo */
+      width: auto;
+      object-fit: contain; /* Memastikan gambar tidak terpotong */
+      display: block;
+    }
+
+    .navbar__logo-text {
+      font-size: 24px;
+      font-weight: 800;
+      color: var(--dark-blue) !important;
+      display: flex;
+      flex-direction: column; /* Lotus di atas, Bali di bawah */
+      line-height: 1.1;
+    }
+
+    .navbar__logo-text span { color: var(--gold); }
+
+    .navbar__menu {
+      display: flex;
+      list-style: none;
+      gap: 25px;
+      margin: 0;
+      padding: 0;
+      align-items: center;
+    }
+
+    .navbar__link {
+      color: #555 !important;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 15px;
+    }
+
+    .navbar__link--active {
+      background: #f0f7f9; /* Pill shape sesuai image_8bf9c4.png */
+      color: var(--dark-blue) !important;
+      padding: 12px 24px;
+      border-radius: 35px;
+    }
+
+    /* Lang Toggle */
+    .lang-toggle {
+      background: #f1f4f8;
+      border-radius: 30px;
+      display: flex;
+      padding: 4px;
+      border: 1px solid #ddd;
+    }
+
+    .lang-btn {
+      border: none;
+      background: none;
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-weight: bold;
+      font-size: 13px;
+      cursor: pointer;
+    }
+
+    .lang-btn--active { background: var(--dark-blue); color: white; }
+
+    /* ============================================================
+       DETAIL CARD
+       ============================================================ */
+    .detail-container {
+      max-width: 1100px;
+      margin: 30px auto;
+      background: white;
+      border-radius: 25px;
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.06);
+      overflow: hidden;
+    }
+
+    .detail-image { padding: 40px; display: flex; align-items: center; justify-content: center; }
+    .detail-image img { width: 100%; height: auto; }
+
+    .detail-content { padding: 50px; border-left: 1px solid #f0f0f0; }
+    .detail-content h1 { font-size: 32px; margin-bottom: 8px; font-weight: 700; }
+    .rating-header { color: #ffc107; margin-bottom: 25px; font-weight: 600; }
+
+    .specs-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+      background: #f8fbff;
+      padding: 20px;
+      border-radius: 15px;
+      margin-bottom: 25px;
+    }
+
+    .spec-item { display: flex; align-items: center; gap: 10px; font-size: 14px; }
+    .spec-item i { color: #3a86ff; width: 20px; }
+
+    .price-list { list-style: none; padding: 0; margin-bottom: 25px; }
+    .price-list li {
+      padding: 10px 0;
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px dashed #eee;
+    }
+    .price-list span { font-weight: 700; color: #3a86ff; }
+
+    .terms-section {
+      font-size: 13px;
+      background: #fffdf2;
+      padding: 15px;
+      border-radius: 12px;
+      border-left: 5px solid #ffde59;
+      margin-bottom: 25px;
+    }
+
+    .rating-box { margin-bottom: 25px; }
+    .stars-input { display: flex; gap: 8px; color: #ddd; cursor: pointer; font-size: 24px; margin: 10px 0; }
+    .stars-input i.active { color: #ffc107; }
+
+    .btn-submit {
+      padding: 10px 25px;
+      background: #333;
+      color: white;
+      border: none;
+      border-radius: 30px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .btn-group { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+    .btn {
+      padding: 15px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+    .btn-wa { background: var(--success); color: white; }
+    .btn-telp { background: #5d6d7e; color: white; }
+
+    @media(max-width: 900px){
+      .detail-container { grid-template-columns: 1fr; margin: 20px; }
+      .detail-content { border-left: none; border-top: 1px solid #eee; }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="navbar__container">
+    <a href="home.html" class="navbar__logo">
+      <img src="../assets/icon.png" alt="Lotus Bali Logo" class="navbar__logo-image" />
+      <div class="navbar__logo-text">Lotus <span>Bali</span></div>
+    </a>
+    
+    <ul class="navbar__menu">
+      <li><a href="home.html" class="navbar__link">Home</a></li>
+      <li><a href="tentang.html" class="navbar__link">Tentang Kami</a></li>
+      <li><a href="paket.html" class="navbar__link">Paket Wisata</a></li>
+      <li><a href="mobil.html" class="navbar__link navbar__link--active">Pilihan Mobil</a></li>
+      <li><a href="hubungi.html" class="navbar__link">Hubungi</a></li>
+    </ul>
+
+    <div class="navbar__controls">
+      <div class="lang-toggle">
+        <button class="lang-btn lang-btn--active">ID</button>
+        <button class="lang-btn">EN</button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div class="detail-container">
+  <div class="detail-image">
+    <img id="detail-image" src="" alt="Mobil">
+  </div>
+
+  <div class="detail-content">
+    <h1 id="detail-title"></h1>
+    <div class="rating-header" id="detail-rating"></div>
+    
+    <div class="specs-grid">
+      <div class="spec-item"><i class="fa-solid fa-users"></i> <span id="spec-user"></span></div>
+      <div class="spec-item"><i class="fa-solid fa-suitcase"></i> <span id="spec-bag"></span></div>
+      <div class="spec-item"><i class="fa-solid fa-gear"></i> <span id="spec-gear"></span></div>
+      <div class="spec-item"><i class="fa-solid fa-wind"></i> <span id="spec-ac"></span></div>
+    </div>
+
+    <ul class="price-list">
+      <li>Full Day (10 Jam) <span id="price-full"></span></li>
+      <li id="row-half">Half Day Tour <span id="price-half"></span></li>
+      <li>Overtime <span>10%/jam</span></li>
+    </ul>
+
+    <div class="terms-section">
+      <strong>Informasi Tambahan:</strong><br>
+      • Tambahan Lovina/Buleleng/Karangasem: +Rp 250rb<br>
+      • Tambahan Bedugul/Kintamani: +Rp 100rb<br>
+      • Termasuk: Sopir & BBM.
+    </div>
+
+    <div class="rating-box">
+      <p><b>Please rate this vehicle:</b></p>
+      <div class="stars-input" id="stars-input">
+        <i class="fa-solid fa-star" data-val="1"></i>
+        <i class="fa-solid fa-star" data-val="2"></i>
+        <i class="fa-solid fa-star" data-val="3"></i>
+        <i class="fa-solid fa-star" data-val="4"></i>
+        <i class="fa-solid fa-star" data-val="5"></i>
+      </div>
+      <button class="btn-submit" id="btn-submit">Submit Rating</button>
+    </div>
+
+    <div class="btn-group">
+      <a href="https://wa.me/628123456789" class="btn btn-wa"><i class="fa-brands fa-whatsapp"></i> Whatsapp</a>
+      <a href="tel:+628123456789" class="btn btn-telp"><i class="fa-solid fa-phone"></i> Telepon</a>
+    </div>
+  </div>
+</div>
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const type = params.get("type");
+  const id = params.get("id");
+
+  const data = {
+    tour: {
+    ubud: {
+      title: "Ubud Full Day Tour",
+      desc: "Nikmati keindahan Ubud dalam satu hari penuh. Destinasi meliputi Tegalalang Rice Terrace, Monkey Forest, Ubud Palace, dan Pasar Seni Ubud. Cocok untuk pasangan maupun keluarga.",
+      price: "Rp 550.000 / Mobil",
+      image: "../assets/ubud.jpg"
+    }
+  },
+
+    mobil: {
+      avanza: {
+        title: "Sewa Toyota Avanza di Bali",
+        rating: "4.2/5 (5 Reviews)",
+        user: "6 Penumpang",
+        bag: "3 Koper",
+        gear: "Manual",
+        ac: "Single Blower",
+        full: "Rp 600.000",
+        half: "Rp 450.000",
+        image: "../assets/avanza.jpg"
+      },
+      innova: {
+        title: "Sewa Toyota Innova di Bali",
+        rating: "4.5/5 (2 Reviews)",
+        user: "7 Penumpang",
+        bag: "4 Koper",
+        gear: "Otomatis",
+        ac: "Double Blower",
+        full: "Rp 900.000",
+        half: "Rp 700.000",
+        image: "../assets/inova.jpg"
+      },
+      alphard: {
+        title: "Sewa Toyota Alphard di Bali",
+        rating: "5/5 (6 Reviews)",
+        user: "7 Penumpang",
+        bag: "4 Koper",
+        gear: "Otomatis",
+        ac: "Double Blower",
+        full: "Rp 900.000",
+        half: "Rp 700.000",
+        image: "../assets/alphard.jpg"
+      },
+      hiace: {
+        title: "Sewa Toyota Hiace di Bali",
+        rating: "4.8/5 (5 Reviews)",
+        user: "14 Penumpang",
+        bag: "8 Koper",
+        gear: "Manual",
+        ac: "Double Blower",
+        full: "Rp 900.000",
+        half: "Rp 700.000",
+        image: "../assets/hiace.jpg"
+      },
+      elf: {
+        title: "Sewa Isuzu Elf di Bali",
+        rating: "4.7/5 (4 Reviews)",
+        user: "20 Penumpang",
+        bag: "10 Koper",
+        gear: "Manual",
+        ac: "Double Blower",
+        full: "Rp 900.000",
+        half: "Rp 700.000",
+        image: "../assets/elf.jpg"
+      },
+      bus: {
+        title: "Sewa Isuzu Elf di Bali",
+        rating: "4.8/5 (4 Reviews)",
+        user: "30 Penumpang",
+        bag: "15+ Koper",
+        gear: "Otomatis",
+        ac: "Central AC",
+        full: "Rp 900.000",
+        half: "Rp 700.000",
+        image: "../assets/bus.jpg"
+      }
+    }
+  };
+
+  if (data[type] && data[type][id]) {
+    const item = data[type][id];
+    document.getElementById("detail-title").innerText = item.title;
+    document.getElementById("detail-rating").innerHTML = `<i class="fa-solid fa-star"></i> `.repeat(5) + ` ${item.rating}`;
+    document.getElementById("spec-user").innerText = item.user;
+    document.getElementById("spec-bag").innerText = item.bag;
+    document.getElementById("spec-gear").innerText = item.gear;
+    document.getElementById("spec-ac").innerText = item.ac;
+    document.getElementById("price-full").innerText = item.full;
+    if(item.half === "N/A") document.getElementById("row-half").style.display = "none";
+    else document.getElementById("price-half").innerText = item.half;
+    document.getElementById("detail-image").src = item.image;
+  }
+
+  // Logika Rating
+  let ratingVal = 0;
+  const stars = document.querySelectorAll('#stars-input i');
+  stars.forEach(star => {
+    star.addEventListener('click', () => {
+      ratingVal = star.getAttribute('data-val');
+      stars.forEach(s => s.classList.remove('active'));
+      for(let i=0; i<ratingVal; i++) stars[i].classList.add('active');
+    });
+  });
+
+  document.getElementById('btn-submit').addEventListener('click', function() {
+    if(ratingVal > 0) {
+      alert("Rating Berhasil Dikirim!");
+      this.innerText = "Submitted";
+      this.disabled = true;
+    }
+  });
+</script>
+
+</body>
+</html>
