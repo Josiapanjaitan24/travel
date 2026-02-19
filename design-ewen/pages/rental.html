@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rental Mobil Bali - Lotus</title>
+    <link rel="icon" type="image/png" href="../assets/img/branding/logo.PNG">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -103,14 +104,77 @@
         </section>
     </main>
 
-    <footer class="border-t border-slate-200/70">
-        <div class="container mx-auto px-6 py-10 flex flex-col md:flex-row gap-5 items-center justify-between">
-            <p class="text-sm text-slate-500" data-i18n="footer.copyright">&copy; 2026 Lotus Bali Tour & Travel. All rights reserved.</p>
-            <div class="flex items-center gap-4 text-sm font-semibold text-slate-600">
-                <a href="index.html" class="hover:text-teal-700" data-i18n="nav.home">Home</a>
-                <a href="about.html" class="hover:text-teal-700" data-i18n="nav.about">About</a>
-                <a href="packages.html" class="hover:text-teal-700" data-i18n="nav.packages">Packages</a>
-                <a href="contact.html" class="hover:text-teal-700" data-i18n="nav.contact">Contact</a>
+    <footer class="lotus-footer text-white">
+        <div class="container mx-auto px-6 py-14 md:py-16">
+            <div class="grid lg:grid-cols-[1.2fr_1fr_0.9fr_1fr] gap-10">
+                <div class="lotus-footer__card">
+                    <div class="flex items-center gap-3 mb-4">
+                        <img src="../assets/img/branding/logo.PNG" alt="Lotus Bali Logo" class="h-14 w-14 rounded-2xl object-contain bg-white/95 p-1.5">
+                        <div>
+                            <p class="text-xs uppercase tracking-[0.3em] text-sky-200" data-i18n="footer.brand_label">Lotus Bali</p>
+                            <p class="text-2xl font-black" data-i18n="footer.brand_subtitle">Private Tour & Travel</p>
+                        </div>
+                    </div>
+                    <p class="text-sm text-sky-100/90 mb-5" data-i18n="footer.tagline">
+                        Lotus Bali menghadirkan pengalaman wisata privat dengan sentuhan premium, itinerary fleksibel, dan layanan support yang responsif.
+                    </p>
+                    <div class="rounded-2xl border border-white/15 bg-white/5 p-4 text-sm text-sky-100/90" data-i18n="footer.registered">
+                        Terdaftar resmi dengan No. NIB 8120105950765
+                    </div>
+                </div>
+                <div>
+                    <p class="text-xs uppercase tracking-[0.26em] text-sky-200 font-bold mb-4" data-i18n="footer.contact_title">Kontak Kami</p>
+                    <ul class="space-y-4 text-sm text-sky-100/90">
+                        <li class="flex gap-3">
+                            <span class="lotus-footer__icon"><i class="fa-solid fa-location-dot"></i></span>
+                            <span data-i18n="footer.address">Jl. Darmawangsa, Pondok Kampial Permai, Ling Anca, Kel. Benoa, Kec. Kuta Selatan</span>
+                        </li>
+                        <li class="flex gap-3 items-center">
+                            <span class="lotus-footer__icon"><i class="fa-solid fa-envelope"></i></span>
+                            <span data-i18n="footer.email">info@lotusbali.travel</span>
+                        </li>
+                        <li class="flex gap-3 items-center">
+                            <span class="lotus-footer__icon"><i class="fa-solid fa-phone"></i></span>
+                            <span data-i18n="footer.phone">+62 859 6020 2022</span>
+                        </li>
+                        <li class="flex gap-3 items-center">
+                            <span class="lotus-footer__icon"><i class="fa-brands fa-whatsapp"></i></span>
+                            <span data-i18n="footer.whatsapp">+62 859 6020 2022</span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <p class="text-xs uppercase tracking-[0.26em] text-sky-200 font-bold mb-4" data-i18n="footer.info_title">Info Lainnya</p>
+                    <ul class="space-y-3 text-sm font-semibold text-sky-100/90">
+                        <li><a href="packages.html" class="lotus-footer__link" data-i18n="footer.link.motor">Sewa Motor Bali</a></li>
+                        <li><a href="rental.html" class="lotus-footer__link" data-i18n="footer.link.car">Harga Sewa Mobil Lotus</a></li>
+                        <li><a href="packages.html" class="lotus-footer__link" data-i18n="footer.link.watersport">Paket Watersport Bali</a></li>
+                        <li><a href="packages.html" class="lotus-footer__link" data-i18n="footer.link.rafting">Paket Rafting Bali</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <p class="text-xs uppercase tracking-[0.26em] text-sky-200 font-bold mb-4" data-i18n="footer.follow_title">Ikuti Kami</p>
+                    <div class="flex flex-wrap gap-3 mb-6">
+                        <a href="#" class="lotus-footer__social social--facebook" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="lotus-footer__social social--instagram" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="lotus-footer__social social--youtube" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="#" class="lotus-footer__social social--linkedin" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                    <div class="rounded-2xl border border-white/15 bg-white/5 p-4 text-sm text-sky-100/90" data-i18n="footer.privacy">
+                        Kebijakan privasi & penggunaan data tersedia untuk menjamin kenyamanan Anda.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="lotus-footer__bottom">
+            <div class="container mx-auto px-6 py-5 flex flex-col md:flex-row gap-4 items-center justify-between">
+                <p class="text-sm text-sky-100/90" data-i18n="footer.copyright">&copy; 2026 Lotus Bali Tour & Travel. All rights reserved.</p>
+                <div class="flex items-center gap-4 text-sm font-semibold text-sky-100/80">
+                    <a href="about.html" class="lotus-footer__link" data-i18n="nav.about">About</a>
+                    <a href="packages.html" class="lotus-footer__link" data-i18n="nav.packages">Packages</a>
+                    <a href="rental.html" class="lotus-footer__link" data-i18n="nav.rental">Rental</a>
+                    <a href="contact.html" class="lotus-footer__link" data-i18n="nav.contact">Contact</a>
+                </div>
             </div>
         </div>
     </footer>

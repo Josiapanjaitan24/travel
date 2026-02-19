@@ -1,5 +1,5 @@
-// CONFIGURATION: Ganti dengan nomor WhatsApp kamu
-const MY_NUMBER = "628123456789"; 
+﻿// CONFIGURATION: Ganti dengan nomor WhatsApp kamu
+const MY_NUMBER = "6282258057099"; 
 
 const AVAILABILITY_CONFIG = {
     package_family_2d1n: {
@@ -46,7 +46,23 @@ const LOTUS_TRANSLATIONS = {
         "nav.contact": "Kontak",
         "nav.contact_us": "Hubungi Kami",
         "loader.subtitle": "Menyiapkan perjalanan Bali Anda",
-        "footer.copyright": "© 2026 Lotus Bali Tour & Travel. Semua hak dilindungi.",
+        "footer.copyright": "Â© 2026 Lotus Bali Tour & Travel. Semua hak dilindungi.",
+        "footer.brand_label": "Lotus Bali",
+        "footer.brand_subtitle": "Private Tour & Travel",
+        "footer.tagline": "Lotus Bali menghadirkan pengalaman wisata privat dengan sentuhan premium, itinerary fleksibel, dan layanan support yang responsif.",
+        "footer.registered": "Terdaftar resmi dengan No. NIB 8120105950765",
+        "footer.contact_title": "Kontak Kami",
+        "footer.address": "Jl. Darmawangsa, Pondok Kampial Permai, Ling Anca, Kel. Benoa, Kec. Kuta Selatan",
+        "footer.email": "info@lotusbali.travel",
+        "footer.phone": "+62 859 6020 2022",
+        "footer.whatsapp": "+62 859 6020 2022",
+        "footer.info_title": "Info Lainnya",
+        "footer.link.motor": "Sewa Motor Bali",
+        "footer.link.car": "Harga Sewa Mobil Lotus",
+        "footer.link.watersport": "Paket Watersport Bali",
+        "footer.link.rafting": "Paket Rafting Bali",
+        "footer.follow_title": "Ikuti Kami",
+        "footer.privacy": "Kebijakan privasi & penggunaan data tersedia untuk menjamin kenyamanan Anda.",
         "label.start_from_idr": "Mulai IDR",
         "alert.package_required": "Mohon lengkapi data wajib booking paket.",
         "alert.package_pick_car": "Silakan pilih salah satu mobil terlebih dahulu atau pilih opsi tanpa sewa mobil.",
@@ -79,7 +95,23 @@ const LOTUS_TRANSLATIONS = {
         "nav.contact": "Contact",
         "nav.contact_us": "Contact Us",
         "loader.subtitle": "Preparing your Bali trip",
-        "footer.copyright": "© 2026 Lotus Bali Tour & Travel. All rights reserved.",
+        "footer.copyright": "Â© 2026 Lotus Bali Tour & Travel. All rights reserved.",
+        "footer.brand_label": "Lotus Bali",
+        "footer.brand_subtitle": "Private Tour & Travel",
+        "footer.tagline": "Lotus Bali delivers private travel experiences with a premium touch, flexible itineraries, and responsive support.",
+        "footer.registered": "Registered officially with No. NIB 8120105950765",
+        "footer.contact_title": "Contact Us",
+        "footer.address": "Jl. Darmawangsa, Pondok Kampial Permai, Ling Anca, Kel. Benoa, Kec. Kuta Selatan",
+        "footer.email": "info@lotusbali.travel",
+        "footer.phone": "+62 859 6020 2022",
+        "footer.whatsapp": "+62 859 6020 2022",
+        "footer.info_title": "More Info",
+        "footer.link.motor": "Bali Motorbike Rental",
+        "footer.link.car": "Lotus Car Rental Rates",
+        "footer.link.watersport": "Bali Watersport Packages",
+        "footer.link.rafting": "Bali Rafting Packages",
+        "footer.follow_title": "Follow Us",
+        "footer.privacy": "Privacy policy & data usage are available to ensure your comfort.",
         "label.start_from_idr": "Starting from IDR",
         "alert.package_required": "Please complete all required package booking fields.",
         "alert.package_pick_car": "Please choose a car first or select no car rental.",
@@ -931,7 +963,7 @@ function initPackagesFlow() {
         const excludes = (card.dataset.excludes || "").split("|").filter(Boolean);
 
         packageTitle.textContent = name;
-        packageMeta.textContent = `${duration} • ${location} • ${t("label.start_from_idr")} ${formatIDR(Number(price))}`;
+        packageMeta.textContent = `${duration} â€¢ ${location} â€¢ ${t("label.start_from_idr")} ${formatIDR(Number(price))}`;
         packageItinerary.innerHTML = itinerary.map((item) => `<li>${item.trim()}</li>`).join("");
         packageIncludes.innerHTML = includes.map((item) => `<li>${item.trim()}</li>`).join("");
         packageExcludes.innerHTML = excludes.map((item) => `<li>${item.trim()}</li>`).join("");
@@ -1051,57 +1083,6 @@ function initScrollReveal() {
     revealTargets.forEach((el) => observer.observe(el));
 }
 
-function initInteractiveCards() {
-    const hoverCards = document.querySelectorAll(".section-shell, .package-card, .vehicle-option");
-    if (!hoverCards.length) {
-        return;
-    }
-
-    const finePointer = window.matchMedia("(pointer: fine)").matches;
-    hoverCards.forEach((card) => {
-        card.classList.add("interactive-card");
-
-        if (!finePointer) {
-            return;
-        }
-
-        card.addEventListener("pointermove", (event) => {
-            const rect = card.getBoundingClientRect();
-            const x = ((event.clientX - rect.left) / rect.width) * 100;
-            const y = ((event.clientY - rect.top) / rect.height) * 100;
-            card.style.setProperty("--mx", `${x}%`);
-            card.style.setProperty("--my", `${y}%`);
-        });
-    });
-}
-
-function initHeroParallax() {
-    const hero = document.querySelector(".ocean-hero");
-    if (!hero) {
-        return;
-    }
-
-    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if (!reducedMotion) {
-        const handleScroll = () => {
-            const shift = Math.min(window.scrollY * 0.12, 80);
-            hero.style.setProperty("--hero-shift", `${shift}px`);
-        };
-        handleScroll();
-        window.addEventListener("scroll", handleScroll, { passive: true });
-    }
-
-    if (window.matchMedia("(pointer: fine)").matches) {
-        hero.addEventListener("pointermove", (event) => {
-            const rect = hero.getBoundingClientRect();
-            const x = ((event.clientX - rect.left) / rect.width) * 100;
-            const y = ((event.clientY - rect.top) / rect.height) * 100;
-            hero.style.setProperty("--hero-mx", `${x}%`);
-            hero.style.setProperty("--hero-my", `${y}%`);
-        });
-    }
-}
-
 function initCtaGlow() {
     const ctaElements = document.querySelectorAll(
         "a.bg-teal-600, button.bg-teal-600, a.bg-sky-500, button.bg-sky-500, a.bg-white.text-teal-700"
@@ -1123,6 +1104,12 @@ function initDetailPackagePage() {
             price: 739714,
             oldPrice: "IDR 839,614",
             image: "https://images.unsplash.com/photo-1544644181-1484b3fdfc62?auto=format&fit=crop&w=1400&q=80",
+            gallery: [
+                "https://images.unsplash.com/photo-1544644181-1484b3fdfc62?auto=format&fit=crop&w=1400&q=80",
+                "https://images.unsplash.com/photo-1506665531195-3566af2b4dfa?auto=format&fit=crop&w=1400&q=80",
+                "https://images.unsplash.com/photo-1537953773345-d172ccf13cf1?auto=format&fit=crop&w=1400&q=80",
+                "https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?auto=format&fit=crop&w=1400&q=80"
+            ],
             description: "Paket favorit untuk tamu dengan waktu singkat yang ingin tetap menikmati kombinasi panorama, budaya, dan kuliner Bali dalam ritme santai.",
             highlights: ["Sunset Spot", "Budaya Bali", "Kuliner Lokal", "Private Tour"],
             suitableFor: "Pasangan, keluarga kecil, dan first timer yang ingin explore Bali secara efisien.",
@@ -1156,6 +1143,12 @@ function initDetailPackagePage() {
             price: 1045000,
             oldPrice: "IDR 1,144,900",
             image: "https://images.unsplash.com/photo-1577717903315-1691ae25ab3f?auto=format&fit=crop&w=1400&q=80",
+            gallery: [
+                "https://images.unsplash.com/photo-1577717903315-1691ae25ab3f?auto=format&fit=crop&w=1400&q=80",
+                "https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=1400&q=80",
+                "https://images.unsplash.com/photo-1526481280695-3c687fd643ed?auto=format&fit=crop&w=1400&q=80",
+                "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1400&q=80"
+            ],
             description: "Program 3 hari yang lebih variatif: pantai selatan, dataran tinggi, dan spot ikonik Bali dalam satu rangkaian yang nyaman.",
             highlights: ["Pantai Selatan", "Kintamani View", "Coffee Stop", "Oleh-oleh Center"],
             suitableFor: "Keluarga, grup kecil, dan tamu yang ingin itinerary seimbang antara santai dan eksplorasi.",
@@ -1190,6 +1183,12 @@ function initDetailPackagePage() {
             price: 1320000,
             oldPrice: "IDR 1,419,900",
             image: "https://images.unsplash.com/photo-1573790387438-4da905039392?auto=format&fit=crop&w=1400&q=80",
+            gallery: [
+                "https://images.unsplash.com/photo-1573790387438-4da905039392?auto=format&fit=crop&w=1400&q=80",
+                "https://images.unsplash.com/photo-1512100356356-de1b84283e18?auto=format&fit=crop&w=1400&q=80",
+                "https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1400&q=80",
+                "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1400&q=80"
+            ],
             description: "Paket paling lengkap untuk tamu yang ingin merasakan pengalaman Bali lebih mendalam, dengan jadwal fleksibel dan kenyamanan tetap terjaga.",
             highlights: ["Multi-Region Tour", "Temple Experience", "Beach & Nature", "Flexible Plan"],
             suitableFor: "Family trip panjang, company outing, dan tamu yang ingin coverage destinasi lebih luas.",
@@ -1237,6 +1236,10 @@ function initDetailPackagePage() {
     const includesList = document.getElementById("detailPackageIncludes");
     const excludesList = document.getElementById("detailPackageExcludes");
     const termsList = document.getElementById("detailPackageTerms");
+    const galleryContainer = document.getElementById("detailPackageGallery");
+    const heroButton = document.getElementById("detailPackageHero");
+    const lightbox = document.getElementById("galleryLightbox");
+    const lightboxImage = document.getElementById("galleryLightboxImage");
 
     const packageNameInput = document.getElementById("dpPackageName");
     const packageDurationInput = document.getElementById("dpPackageDuration");
@@ -1246,7 +1249,8 @@ function initDetailPackagePage() {
         return;
     }
 
-    heroImage.src = packageData.image;
+    const galleryImages = Array.isArray(packageData.gallery) && packageData.gallery.length ? packageData.gallery : [packageData.image];
+    heroImage.src = galleryImages[0];
     heroImage.alt = packageData.name;
     packageName.textContent = packageData.name;
     packageMeta.textContent = `${packageData.duration} - ${packageData.location}`;
@@ -1266,6 +1270,100 @@ function initDetailPackagePage() {
     packageNameInput.value = packageData.name;
     packageDurationInput.value = packageData.duration;
     packagePriceInput.value = String(packageData.price);
+
+    if (galleryContainer) {
+        galleryContainer.innerHTML = galleryImages
+            .map((url, index) => {
+                const activeClass = index === 0 ? "is-active" : "";
+                return `
+                    <button type="button" class="detail-gallery__thumb ${activeClass}" data-gallery-thumb data-gallery-src="${url}" data-gallery-index="${index}">
+                        <img src="${url}" alt="${packageData.name} photo ${index + 1}" loading="lazy" decoding="async">
+                    </button>
+                `;
+            })
+            .join("");
+
+        galleryContainer.querySelectorAll("[data-gallery-thumb]").forEach((button) => {
+            button.addEventListener("click", () => {
+                const src = button.getAttribute("data-gallery-src");
+                const index = Number(button.getAttribute("data-gallery-index") || 0);
+                if (!src) {
+                    return;
+                }
+                heroImage.src = src;
+                galleryContainer.querySelectorAll(".detail-gallery__thumb").forEach((thumb) => thumb.classList.remove("is-active"));
+                button.classList.add("is-active");
+
+            });
+        });
+    }
+
+    if (lightbox && lightboxImage) {
+        if (heroButton) {
+            heroButton.addEventListener("click", () => {
+                const currentIndex = galleryContainer?.querySelector(".detail-gallery__thumb.is-active")?.getAttribute("data-gallery-index");
+                const index = Number(currentIndex || 0);
+                lightboxImage.src = galleryImages[index];
+                lightboxImage.dataset.index = String(index);
+                lightbox.classList.add("is-open");
+                lightbox.setAttribute("aria-hidden", "false");
+            });
+        }
+
+        const closeButton = lightbox.querySelector(".gallery-lightbox__close");
+        const prevButton = lightbox.querySelector(".gallery-lightbox__nav--prev");
+        const nextButton = lightbox.querySelector(".gallery-lightbox__nav--next");
+
+        const clampIndex = (value) => {
+            const max = galleryImages.length - 1;
+            if (value < 0) return max;
+            if (value > max) return 0;
+            return value;
+        };
+
+        const showIndex = (value) => {
+            const nextIndex = clampIndex(value);
+            const nextSrc = galleryImages[nextIndex];
+            lightboxImage.src = nextSrc;
+            lightboxImage.dataset.index = String(nextIndex);
+        };
+
+        const closeLightbox = () => {
+            lightbox.classList.remove("is-open");
+            lightbox.setAttribute("aria-hidden", "true");
+        };
+
+        closeButton?.addEventListener("click", closeLightbox);
+        lightbox.addEventListener("click", (event) => {
+            if (event.target === lightbox) {
+                closeLightbox();
+            }
+        });
+        prevButton?.addEventListener("click", () => {
+            const current = Number(lightboxImage.dataset.index || 0);
+            showIndex(current - 1);
+        });
+        nextButton?.addEventListener("click", () => {
+            const current = Number(lightboxImage.dataset.index || 0);
+            showIndex(current + 1);
+        });
+
+        document.addEventListener("keydown", (event) => {
+            if (!lightbox.classList.contains("is-open")) {
+                return;
+            }
+            if (event.key === "Escape") {
+                closeLightbox();
+            } else if (event.key === "ArrowLeft") {
+                const current = Number(lightboxImage.dataset.index || 0);
+                showIndex(current - 1);
+            } else if (event.key === "ArrowRight") {
+                const current = Number(lightboxImage.dataset.index || 0);
+                showIndex(current + 1);
+            }
+        });
+    }
+
 
     const needCarRadios = document.querySelectorAll("input[name='dpNeedCar']");
     const carSection = document.getElementById("dpCarRentalSection");
@@ -1694,7 +1792,7 @@ function bookingWA(title, bookingKey) {
 // Fungsi WhatsApp untuk Halaman Kontak
 function sendContactWA() {
     const name = document.getElementById('name').value;
-    const service = document.getElementById('service').value;
+    const email = document.getElementById('email')?.value.trim() || "";
     const message = document.getElementById('message').value;
 
     if (!name || !message) {
@@ -1702,7 +1800,8 @@ function sendContactWA() {
         return;
     }
 
-    const waMessage = `Halo Lotus Bali!\n\n*Nama:* ${name}\n*Layanan:* ${service}\n*Pesan:* ${message}`;
+    const emailLine = email ? `\n*Email:* ${email}` : "";
+    const waMessage = `Halo Lotus Bali!\n\n*Nama:* ${name}${emailLine}\n*Pesan:* ${message}`;
     const text = encodeURIComponent(waMessage);
     window.open(`https://wa.me/${MY_NUMBER}?text=${text}`, '_blank');
 }
@@ -1728,12 +1827,13 @@ initPackagesFlow();
 initDetailPackagePage();
 initDetailRentalPage();
 initScrollReveal();
-initInteractiveCards();
-initHeroParallax();
+    // initInteractiveCards();
+    // initHeroParallax();
 initCtaGlow();
 initLanguageSwitcher();
 initFloatingWhatsAppButton();
 initFaqAccordion();
 initPageLoaderTransitions();
+
 
 
