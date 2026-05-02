@@ -243,13 +243,21 @@
   </div>
 </section>
 
-<!-- MAP PLACEHOLDER -->
+<!-- MAP EMBED -->
 <section class="section section--alt" style="padding-top:0;">
   <div class="container">
-    <div class="js-reveal" style="border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-md);height:320px;background:var(--color-bg-alt);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:12px;color:var(--color-text-muted);border:1px solid var(--color-border);">
-      <i data-lucide="map" width="40" height="40" style="stroke:var(--color-secondary);opacity:0.5;"></i>
-      <p style="font-size:0.9rem;font-weight:500;">Peta Lokasi – Jl. Sunset Road No. 88, Kuta, Bali</p>
-      <a href="https://maps.google.com/?q=Jl+Sunset+Road+Kuta+Bali" target="_blank" class="btn btn--outline-dark btn--sm">
+    <div class="js-reveal" style="border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-md);">
+      <iframe
+        class="map-embed"
+        src="https://maps.google.com/maps?q=Jl.+Sunset+Road+No.+88,+Kuta,+Bali&t=&z=16&ie=UTF8&iwloc=&output=embed"
+        title="Lokasi Lotus Bali – Jl. Sunset Road No. 88, Kuta, Bali"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+    <div style="text-align:center;margin-top:16px;">
+      <a href="https://maps.google.com/?q=Jl+Sunset+Road+No+88+Kuta+Bali" target="_blank" rel="noopener noreferrer" class="btn btn--outline-dark btn--sm">
         <i data-lucide="external-link" width="14" height="14"></i>
         Buka di Google Maps
       </a>
@@ -354,6 +362,10 @@
     </div>
   </div>
 </footer>
+
+<a href="https://wa.me/62817168742" class="wa-float" aria-label="Chat WhatsApp" target="_blank" rel="noopener noreferrer">
+  <i data-lucide="message-circle" width="26" height="26"></i>
+</a>
 
 <script src="../js/script.js"></script>
 <script>document.addEventListener('DOMContentLoaded', () => lucide.createIcons());</script>

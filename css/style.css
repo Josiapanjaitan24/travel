@@ -1819,3 +1819,230 @@ input::placeholder, textarea::placeholder { color: var(--color-text-light); }
   font-size:0.9rem;
   margin-bottom:6px;
 }
+
+/* ================================================================
+   REAL PHOTOS — Unsplash CDN (high-quality, free)
+   Rules placed AFTER existing img-ph rules so cascade overrides.
+   background-color provides solid fallback if image fails to load.
+   ================================================================ */
+.img-ph--ubud, .img-ph--kintamani, .img-ph--tanah-lot, .img-ph--east,
+.img-ph--nusa, .img-ph--waterfall, .img-ph--about,
+.img-ph--g1, .img-ph--g2, .img-ph--g3, .img-ph--g4, .img-ph--g5, .img-ph--g6 {
+  font-size: 0 !important;
+  color: transparent !important;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Tour / Paket images — verified Unsplash photos */
+.img-ph--ubud {
+  background-color: #2D6A4F;
+  background-image: url('https://images.unsplash.com/photo-1559628233-eb1b1a45564b?auto=format&fit=crop&w=800&q=80');
+}
+.img-ph--kintamani {
+  background-color: #7F4F24;
+  background-image: url('https://images.unsplash.com/photo-1694968279302-eaeb987e6126?auto=format&fit=crop&w=800&q=80');
+}
+.img-ph--tanah-lot {
+  background-color: #1D3557;
+  background-image: url('https://images.unsplash.com/photo-1653021864722-e37056b6b8c4?auto=format&fit=crop&w=800&q=80');
+}
+.img-ph--east {
+  background-color: #CB4335;
+  background-image: url('https://images.unsplash.com/photo-1593938637267-7d70420742a3?auto=format&fit=crop&w=800&q=80');
+}
+.img-ph--nusa {
+  background-color: #154360;
+  background-image: url('https://images.unsplash.com/photo-1566987827971-f2c40e748a54?auto=format&fit=crop&w=800&q=80');
+}
+.img-ph--waterfall {
+  background-color: #0E6655;
+  background-image: url('https://images.unsplash.com/photo-1554931670-4ebfabf6e7a9?auto=format&fit=crop&w=800&q=80');
+}
+
+/* About page hero image */
+.img-ph--about {
+  background-color: #073B4C;
+  background-image: url('https://images.unsplash.com/photo-1558005530-a7958896ec60?auto=format&fit=crop&w=800&q=80');
+  min-height: 460px !important;
+}
+
+/* Gallery images — verified Bali photos */
+.img-ph--g1 {
+  background-color: #2D6A4F;
+  background-image: url('https://images.unsplash.com/photo-1559628233-eb1b1a45564b?auto=format&fit=crop&w=800&q=80');
+}
+.img-ph--g2 {
+  background-color: #004D40;
+  background-image: url('https://images.unsplash.com/photo-1653021864722-e37056b6b8c4?auto=format&fit=crop&w=800&q=80');
+}
+.img-ph--g3 {
+  background-color: #4A148C;
+  background-image: url('https://images.unsplash.com/photo-1694968279302-eaeb987e6126?auto=format&fit=crop&w=800&q=80');
+}
+.img-ph--g4 {
+  background-color: #01579B;
+  background-image: url('https://images.unsplash.com/photo-1566987827971-f2c40e748a54?auto=format&fit=crop&w=1200&q=80');
+}
+.img-ph--g5 {
+  background-color: #0D47A1;
+  background-image: url('https://images.unsplash.com/photo-1554931670-4ebfabf6e7a9?auto=format&fit=crop&w=800&q=80');
+}
+.img-ph--g6 {
+  background-color: #BF360C;
+  background-image: url('https://images.unsplash.com/photo-1756450409271-6143eb8375a0?auto=format&fit=crop&w=800&q=80');
+}
+
+/* ================================================================
+   CAR CARD IMAGE — proper fill with object-fit
+   ================================================================ */
+.car-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform var(--transition-slow);
+}
+.car-card:hover .car-card__image img {
+  transform: scale(1.05);
+}
+
+/* ================================================================
+   STATS ROW — tentang.html achievement numbers
+   ================================================================ */
+.stats-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-lg);
+  margin: var(--space-2xl) 0;
+}
+.stat-card {
+  text-align: center;
+  padding: var(--space-xl) var(--space-lg);
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-border);
+  transition: all var(--transition-base);
+}
+.stat-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-secondary);
+}
+.stat-card__num {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: var(--color-primary);
+  letter-spacing: -0.03em;
+  line-height: 1;
+  margin-bottom: var(--space-sm);
+}
+.stat-card__num span { color: var(--color-secondary); }
+.stat-card__label {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+@media (max-width: 768px) {
+  .stats-row { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* ================================================================
+   FLOATING WHATSAPP BUTTON
+   ================================================================ */
+.wa-float {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  z-index: 998;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #25D366, #128C7E);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 28px rgba(37,211,102,0.50);
+  transition: all var(--transition-spring);
+  text-decoration: none;
+}
+.wa-float:hover {
+  transform: scale(1.14) translateY(-4px);
+  box-shadow: 0 16px 40px rgba(37,211,102,0.60);
+}
+.wa-float svg { stroke: white; }
+/* Pulse ring */
+.wa-float::before {
+  content: '';
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  border: 2px solid rgba(37,211,102,0.35);
+  animation: waPulse 2.4s ease-in-out infinite;
+}
+@keyframes waPulse {
+  0%, 100% { transform: scale(1); opacity: 0.6; }
+  50% { transform: scale(1.15); opacity: 0; }
+}
+
+/* ================================================================
+   GALLERY OVERLAY — visible on touch devices
+   ================================================================ */
+@media (hover: none) {
+  .gallery-item__overlay { opacity: 1; }
+}
+
+/* ================================================================
+   MAP EMBED
+   ================================================================ */
+.map-embed {
+  display: block;
+  width: 100%;
+  height: 340px;
+  border: none;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+}
+
+/* ================================================================
+   PAGE HERO — add decorative overlay pattern
+   ================================================================ */
+.page-hero {
+  background:
+    linear-gradient(155deg, rgba(7,59,76,0.94) 0%, rgba(17,138,178,0.82) 100%),
+    url('https://images.unsplash.com/photo-1559628233-eb1b1a45564b?auto=format&fit=crop&w=1400&q=60') center/cover no-repeat;
+}
+
+/* ================================================================
+   HERO STATS — responsive padding
+   ================================================================ */
+@media (max-width: 640px) {
+  .hero__stats { padding: var(--space-md) var(--space-lg); }
+  .hero__stat { padding: 0 var(--space-md); }
+}
+
+/* ================================================================
+   FAQ DETAILS — smooth expand animation
+   ================================================================ */
+details[open] summary ~ * {
+  animation: detailsOpen 0.3s ease-out;
+}
+@keyframes detailsOpen {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+details summary::-webkit-details-marker { display: none; }
+details[open] summary i[data-lucide="chevron-down"] {
+  transform: rotate(180deg);
+  transition: transform 0.25s ease;
+}
+details summary i[data-lucide="chevron-down"] {
+  transition: transform 0.25s ease;
+}
